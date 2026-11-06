@@ -14,7 +14,8 @@ Beatmap generation uses SoundBeats' existing proprietary engine through a privat
 - Private beatmap engine deployed on the hackathon server as a localhost-only service (token-protected, not publicly reachable); health check passing.
 - Beatmap feature merged to main (PR #2); teammate connected to the live engine through an SSH tunnel.
 - "Play in SoundBeats": play link + QR landing page, public play package (beatmap + audio URL + cover photo), `play-link` API for the AI agent, tests. Deep link `soundbeats://play?pkg=…` opens the iOS TestFlight build.
-- Next: public HTTPS address for the server, game-side deep link handling (TestFlight build), real Lyria track end to end.
+- App deployed on the hackathon server at https://ethglobal.soundbeats.io/game/ (nginx sub-path, HTTPS). Verified end to end from outside: track -> beatmap from the live private engine -> public play package -> play page with deep link.
+- Next: game-side deep link handling (iOS TestFlight build), TestFlight public link, real Lyria track end to end.
 
 ## Planned
 - Fast auto-generated beatmaps for picture-to-music (in progress).
