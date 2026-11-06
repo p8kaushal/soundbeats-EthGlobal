@@ -11,7 +11,8 @@ Beatmap generation uses SoundBeats' existing proprietary engine through a privat
 - Repo created; Parth's picture-to-music MVP merged (PR #1): React/Vite UI, Node server, Lyria provider, demo mode.
 - Hackathon server provisioned (isolated from SoundBeats production/staging).
 - Beatmap integration (PR #2): `beatmapClient.js`, `POST/GET /api/tracks/{id}/beatmap?difficulty=1-10`, "03 / Play" panel with difficulty slider, chart preview, stats and download; mock mode for local testing; docs and sample beatmap.
-- Next: deploy private engine on the hackathon server, connect real beatmaps end to end.
+- Private beatmap engine deployed on the hackathon server as a localhost-only service (token-protected, not publicly reachable); health check passing.
+- Next: connect the app to the live engine for real beatmaps end to end.
 
 ## Planned
 - Fast auto-generated beatmaps for picture-to-music (in progress).
