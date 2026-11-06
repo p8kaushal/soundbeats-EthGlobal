@@ -137,10 +137,10 @@ const server = http.createServer(async (req, res) => {
       res.writeHead(200, { ...headers, 'Content-Length': bytes.length });
       return req.method === 'HEAD' ? res.end() : res.end(bytes);
     }
-    if (req.method === 'GET' && (url.pathname === '/' || /^\/assets\/[a-zA-Z0-9_.-]+$/.test(url.pathname))) {
+    if ((req.method === 'GET' || req.method === 'HEAD') && (url.pathname === '/' || /^\/assets\/[a-zA-Z0-9_.-]+$/.test(url.pathname))) {
       const file = url.pathname === '/' ? 'index.html' : url.pathname.slice(1);
       const type = file.endsWith('.html') ? 'text/html; charset=utf-8' : file.endsWith('.js') ? 'text/javascript; charset=utf-8' : file.endsWith('.css') ? 'text/css; charset=utf-8' : 'application/octet-stream';
-      try { const content = await readFile(path.join(root, 'dist', file)); res.writeHead(200, { 'Content-Type': type }); return res.end(content); }
+      try { const content = await readFile(path.join(root, 'dist', file)); res.writeHead(200, { 'Content-Type': type }); return res.end(req.method === 'HEAD' ? undefined : content); }
       catch (error) { if (error.code === 'ENOENT') return json(res, 404, { error: 'Frontend build not found. Run npm run build or use npm run dev.' }); throw error; }
     }
     json(res, 404, { error: 'Not found.' });
