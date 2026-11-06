@@ -2,6 +2,7 @@ import http from 'node:http';
 import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import { randomUUID } from 'node:crypto';
 import { generateMusic } from './provider.js';
+import { generateBeatmap, beatmapEngineConfigured } from './beatmapClient.js';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
@@ -49,6 +50,28 @@ const server = http.createServer(async (req, res) => {
       if (!demo && !process.env.GEMINI_API_KEY) return json(res, 503, { error: 'Live generation needs GEMINI_API_KEY. Use the demo track or configure the key.' });
       const record = { id: randomUUID(), status: 'processing', source: demo ? 'demo' : 'lyria', createdAt: new Date().toISOString(), audioUrl: null, format: null, mimeType: null, durationSeconds: null };
       await save(record); run(record, image, mimeType, input.prompt || '', demo).catch(console.error); return json(res, 202, record);
+    }
+    const beatmapMatch = url.pathname.match(/^\/api\/tracks\/([0-9a-f-]{36})\/beatmap$/);
+    if (beatmapMatch && (req.method === 'POST' || req.method === 'GET')) {
+      const record = records.get(beatmapMatch[1]);
+      if (!record) return json(res, 404, { error: 'Track not found.' });
+      if (record.status !== 'completed') return json(res, 409, { error: 'Audio is not ready.' });
+      const difficulty = Number(url.searchParams.get('difficulty') || 5);
+      if (!Number.isInteger(difficulty) || difficulty < 1 || difficulty > 10) return json(res, 400, { error: 'Difficulty must be a whole number from 1 to 10.' });
+      const file = path.join(data, `${record.id}.beatmap-d${difficulty}.json`);
+      if (req.method === 'GET') {
+        try { const saved = await readFile(file); res.writeHead(200, { 'Content-Type': 'application/json', 'Content-Disposition': `attachment; filename="soundbeats-${record.id}-d${difficulty}.json"`, 'Cache-Control': 'no-store' }); return res.end(saved); }
+        catch (e) { if (e.code === 'ENOENT') return json(res, 404, { error: 'Beatmap not generated yet. POST to this URL first.' }); throw e; }
+      }
+      if (!beatmapEngineConfigured()) return json(res, 503, { error: 'Beatmap engine is not configured. Set BEATMAP_ENGINE_URL and BEATMAP_ENGINE_TOKEN (or BEATMAP_ENGINE_MOCK=1 for a placeholder).' });
+      try {
+        const audio = await readFile(path.join(data, `${record.id}.${record.format}`));
+        const result = await generateBeatmap({ audio, mimeType: record.mimeType, difficulty, title: 'Soundbeats Photo Track', guid: record.id });
+        await writeFile(file, JSON.stringify(result.beatmap));
+        record.beatmaps = { ...(record.beatmaps || {}), [difficulty]: { url: `/api/tracks/${record.id}/beatmap?difficulty=${difficulty}`, source: result.source, notes: result.beatmap.beats.length, bpm: result.info?.bpm ?? null, createdAt: new Date().toISOString() } };
+        await save(record);
+        return json(res, 200, { ...result, beatmapUrl: record.beatmaps[difficulty].url });
+      } catch (e) { console.error(e); return json(res, 502, { error: e.message || 'Beatmap generation failed.' }); }
     }
     const match = url.pathname.match(/^\/api\/tracks\/([0-9a-f-]{36})(\/audio)?$/);
     if ((req.method === 'GET' || req.method === 'HEAD') && match) {
