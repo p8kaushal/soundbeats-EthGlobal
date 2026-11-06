@@ -13,8 +13,15 @@ export async function generateMusic({ image, mimeType, prompt, apiKey, timeoutMs
     throw new Error(error.name === 'TimeoutError' ? 'Music generation timed out. Please try again.' : 'Could not reach the music provider. Please try again.');
   }
   if (!response.ok) {
+    const detail = await response.json().catch(() => ({}));
+    const reason = String(detail?.error?.message || '');
     if (response.status === 429) throw new Error('Provider quota or rate limit reached. Check billing and quota, then try again.');
     if (response.status === 401 || response.status === 403) throw new Error('Provider access denied. Check your API key, billing, and model access.');
+    if (response.status === 400) {
+      if (/image|mime|media|format|size/i.test(reason)) throw new Error('The music provider rejected this image. Try a smaller JPEG or PNG.');
+      if (/prompt|content|safety|policy/i.test(reason)) throw new Error('The music provider rejected this prompt. Try a simpler instrumental description.');
+      throw new Error('The music provider rejected this request. Try a different image and a short instrumental prompt.');
+    }
     throw new Error(`Music provider could not complete the request (HTTP ${response.status}).`);
   }
   const result = await response.json();

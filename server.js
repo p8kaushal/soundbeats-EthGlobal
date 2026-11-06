@@ -62,6 +62,31 @@ const server = http.createServer(async (req, res) => {
     }
     let session;
     const ensureSession = () => session ||= sessionFor(req, res);
+    if (req.method === 'POST' && url.pathname === '/api/agent/transcribe') {
+      if (rateLimited(req, 'transcribe', 30, 60 * 60 * 1000)) return json(res, 429, { error: 'Voice limit reached. Try again later.' });
+      let input; try { input = await body(req); } catch { return json(res, 400, { error: 'Invalid recording.' }); }
+      const mimeType = typeof input.mimeType === 'string' ? input.mimeType.split(';')[0] : '';
+      if (!['audio/webm', 'audio/mp4', 'audio/mpeg', 'audio/wav', 'audio/ogg'].includes(mimeType) || typeof input.audioBase64 !== 'string' || !/^[A-Za-z0-9+/]+={0,2}$/.test(input.audioBase64) || input.audioBase64.length > 4000000) return json(res, 400, { error: 'Unsupported or oversized recording.' });
+      if (!process.env.GEMINI_API_KEY) return json(res, 503, { error: 'Voice transcription is not configured.' });
+      try {
+        const response = await fetch('https://generativelanguage.googleapis.com/v1beta/interactions', { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': process.env.GEMINI_API_KEY }, body: JSON.stringify({ model: 'gemini-3.8-flash', input: [{ type: 'text', text: 'Transcribe the spoken words exactly. Return only the transcript.' }, { type: 'audio', mime_type: mimeType, data: input.audioBase64 }] }), signal: AbortSignal.timeout(30000) });
+        if (!response.ok) return json(res, 502, { error: 'Voice transcription is unavailable.' });
+        const result = await response.json();
+        return json(res, 200, { transcript: (result.steps || []).filter(step => step.type === 'model_output').flatMap(step => step.content || []).map(part => part.text || '').join('') });
+      } catch { return json(res, 502, { error: 'Voice transcription is unavailable.' }); }
+    }
+    if (req.method === 'POST' && url.pathname === '/api/agent/chat') {
+      if (rateLimited(req, 'agent', 40, 60 * 60 * 1000)) return json(res, 429, { error: 'Chat limit reached. Try again later.' });
+      let input; try { input = await body(req); } catch { return json(res, 400, { error: 'Invalid request.' }); }
+      if (typeof input.message !== 'string' || !input.message.trim() || input.message.length > 2000) return json(res, 400, { error: 'Enter a message up to 2000 characters.' });
+      if (!process.env.GEMINI_API_KEY) return json(res, 503, { error: 'Chat is not configured.' });
+      try {
+        const response = await fetch('https://generativelanguage.googleapis.com/v1beta/interactions', { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': process.env.GEMINI_API_KEY }, body: JSON.stringify({ model: 'gemini-3.8-flash', system_instruction: 'You are the SoundBeats music assistant. Help users choose an energetic music style and rhythm game difficulty. Be concise. Never claim a track or beatmap has been generated unless the application confirms it.', input: input.message }), signal: AbortSignal.timeout(30000) });
+        if (!response.ok) return json(res, 502, { error: 'Chat provider unavailable. Check model access and quota.' });
+        const result = await response.json();
+        return json(res, 200, { reply: (result.steps || []).filter(step => step.type === 'model_output').flatMap(step => step.content || []).map(part => part.text || '').join('') || 'Please try another message.' });
+      } catch { return json(res, 502, { error: 'Chat provider unavailable. Please try again.' }); }
+    }
     if (req.method === 'GET' && url.pathname === '/api/auth/world/status') return json(res, 200, worldStatus(ensureSession()));
     if (req.method === 'GET' && url.pathname === '/api/auth/world/start') {
       try { const location = await beginWorldAuth(req, res); res.writeHead(302, { Location: location, 'Cache-Control': 'no-store' }); return res.end(); }

@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import './style.css';
-import './player.css';
+import AgentApp from './AgentApp.jsx';
 
 const rel = value => (value || '').replace(/^\/+/, '');
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
@@ -104,4 +103,4 @@ function App() {
     <footer><span>MADE FOR THE MOMENTS THAT MOVE YOU.</span><span>SOUNDBEATS © 2026</span></footer></main>;
 }
 
-createRoot(document.getElementById('root')).render(<App/>);
+createRoot(document.getElementById('root')).render(<AgentApp/>);
