@@ -28,7 +28,9 @@ export function useCatalog() {
   const query = useQuery({
     queryKey: ['catalog'],
     enabled: !!client,
-    refetchInterval: 15_000,
+    refetchInterval: 60_000,
+    staleTime: 30_000,
+    refetchOnWindowFocus: false,
     queryFn: async (): Promise<Catalog> => {
       if (!client) return EMPTY
       const base = { address: SOUNDBEATS_ADDRESS, abi: soundBeatsAbi } as const

@@ -29,7 +29,9 @@ export function useMe(releaseIds: number[]) {
   const query = useQuery({
     queryKey: ['me', address, releaseIds.join(',')],
     enabled: !!address && !!client,
-    refetchInterval: 15_000,
+    refetchInterval: 30_000,
+    staleTime: 15_000,
+    refetchOnWindowFocus: false,
     queryFn: async (): Promise<MyState> => {
       if (!address || !client) return EMPTY
       const base = { address: SOUNDBEATS_ADDRESS, abi: soundBeatsAbi } as const

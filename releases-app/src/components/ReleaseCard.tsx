@@ -93,7 +93,7 @@ export function ReleaseCard({ release, data }: { release: Release; data: AppData
                 Unlocked with a free pass from {myPassBrand.brandName}
               </span>
             ) : (
-              'Unlocked. Ready to play.'
+              'Access unlocked.'
             )}
           </div>
         ) : !isConnected ? (
@@ -119,7 +119,7 @@ export function ReleaseCard({ release, data }: { release: Release; data: AppData
             )}
           </div>
         )}
-        <TxStatus state={state} onReset={reset} />
+        <TxStatus state={owned && (state.phase === 'error' || state.phase === 'uncertain') ? { phase: 'idle' } : state} onReset={reset} />
       </div>
     </article>
   )
