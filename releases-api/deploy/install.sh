@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # Installs or updates the artist upload API on the hackathon EC2 server.
-# Run from anywhere:  bash ~/soundbeats-EthGlobal/releases-api/deploy/install.sh
+# Uses its own clone (~/soundbeats-releases) so Parth's app in ~/soundbeats-EthGlobal is never touched.
+# Run:  bash ~/soundbeats-releases/releases-api/deploy/install.sh
 set -euo pipefail
-API=/home/ubuntu/soundbeats-EthGlobal/releases-api
+API=/home/ubuntu/soundbeats-releases/releases-api
 SITE=/etc/nginx/sites-available/arc
 
 cd "$API"
@@ -17,6 +18,10 @@ sudo cp deploy/soundbeats-releases-api.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable --now soundbeats-releases-api >/dev/null
 sudo systemctl restart soundbeats-releases-api
+
+echo "== site files"
+sudo rm -rf /tmp/arc-dist && cp -r /home/ubuntu/soundbeats-releases/releases-app/dist /tmp/arc-dist
+sudo cp -r /tmp/arc-dist/. /var/www/arc/ && rm -rf /tmp/arc-dist
 
 echo "== nginx"
 sudo cp deploy/nginx-arc-api.conf /etc/nginx/snippets/arc-api.conf

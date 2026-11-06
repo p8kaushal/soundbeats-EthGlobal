@@ -7,7 +7,7 @@ Wants=network-online.target
 [Service]
 Type=simple
 User=ubuntu
-WorkingDirectory=/home/ubuntu/soundbeats-EthGlobal/releases-api
+WorkingDirectory=/home/ubuntu/soundbeats-releases/releases-api
 # Same Arkiv writer wallet as the photo-to-music app. The key stays on this server.
 EnvironmentFile=/home/ubuntu/secrets/arkiv.env
 Environment=PORT=3300

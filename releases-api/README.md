@@ -25,7 +25,7 @@ Other routes: `GET /api/uploads/:id`, `GET /api/uploads?artist=0x…`, `GET /api
 The EC2 instance needs an IAM role that allows `s3:PutObject` and `s3:GetObject` on `arn:aws:s3:::soundbeats-ethglobal-media-20261106/artist_uploads/*`. No AWS keys are stored in files. Arkiv uses the existing `~/secrets/arkiv.env`.
 
 ```bash
-bash ~/soundbeats-EthGlobal/releases-api/deploy/install.sh
+bash ~/soundbeats-releases/releases-api/deploy/install.sh
 ```
 
 ## Test
