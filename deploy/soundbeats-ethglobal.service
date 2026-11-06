@@ -1,0 +1,20 @@
+[Unit]
+Description=Soundbeats ETHGlobal portal
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/soundbeats-EthGlobal
+EnvironmentFile=/home/ubuntu/secrets/app.env
+EnvironmentFile=/home/ubuntu/secrets/world.env
+EnvironmentFile=/home/ubuntu/secrets/arkiv.env
+ExecStart=/usr/bin/npm start
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
