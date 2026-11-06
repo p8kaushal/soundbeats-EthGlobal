@@ -1,0 +1,3011 @@
+{
+  "schemaVersion": 1,
+  "bucket": "soundbeats-ethglobal-media-20261106",
+  "region": "ap-northeast-1",
+  "prefix": "soundbeats_songs_pack/",
+  "manifestKey": "soundbeats_songs_pack/MANIFEST.csv",
+  "tracks": [
+    {
+      "catalogId": "36f63813e6db1da2ab75c678",
+      "title": "abide",
+      "artistName": "failure routine",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 2469644,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/failure routine - abide.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/failure routine - abide.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2469644,
+        "sha256": "165e9d8c0a1a91d77bcbc43842c28f866d08e4e9ec7ca12c0061b266f3976b2a",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/failure routine - abide.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/failure routine - abide.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 23743,
+        "sha256": "de9306de6e5c48086ffe0ae43a325f65d2847c24184680ca5173babe3a769ea9",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "4",
+        "releaseId": "4",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "734415f00870aca9aca163ed",
+      "title": "ahsyo",
+      "artistName": "failure routine",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 1810988,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/failure routine - ahsyo.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/failure routine - ahsyo.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1810988,
+        "sha256": "67f672c6bb2c864cc1c0af846de1fe9815ae249a601423992accd339f7cb293c",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/failure routine - ahsyo.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/failure routine - ahsyo.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 50979,
+        "sha256": "582f001a79b762b30a8e11370790f8ab88be858830616a42819648fa2b745ff3",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "5",
+        "releaseId": "5",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "116f8adb29be0cefbb3401f9",
+      "title": "amham",
+      "artistName": "failure routine",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 1965105,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/failure routine - amham.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/failure routine - amham.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1965105,
+        "sha256": "351958ea346462329329ac48bf3197d4e49ca6642f09efd4505a366665ae98f3",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/failure routine - amham.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/failure routine - amham.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 57531,
+        "sha256": "fc219581e85607258b59be6eb5e38d4b155a946a3ac1687ff79629cb19b4f17c",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "6",
+        "releaseId": "6",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "f7b168a40089205c60d1956c",
+      "title": "bombfall psalm",
+      "artistName": "empress trash",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 2933324,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/empress trash - bombfall psalm.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/empress trash - bombfall psalm.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2933324,
+        "sha256": "22fc0eb8c300c1f7fbe54d69c5d0d82f195adf68489a39f823fca9496b7b338d",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/empress trash - bombfall psalm.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/empress trash - bombfall psalm.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 37263,
+        "sha256": "87edfd092a16b6aeb9f5f6d2bc458c2fbcd43cef4a5fd45445285496a48252ec",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "7",
+        "releaseId": "7",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "d808f9af3a9f5257aae6992d",
+      "title": "cc0 plug",
+      "artistName": "0soonbirds (,)",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 1818764,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/0soonbirds (,) - cc0 plug.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/0soonbirds (,) - cc0 plug.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1818764,
+        "sha256": "298ea786109f2a0c8cf3875537f860f0bf0df8783f11d7f5341ecde864ef661b",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/0soonbirds (,) - cc0 plug.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/0soonbirds (,) - cc0 plug.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 8616,
+        "sha256": "bb568b1282cf97f78b7eb88b19e6b1484c29644a3c921a63e3984639227aa6ce",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "8",
+        "releaseId": "8",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "b42953e91739632d67bc7ca9",
+      "title": "devcygr - rise of the robots ii",
+      "artistName": "gbo.gr.cy",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 1830860,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/gbo.gr.cy - devcygr - rise of the robots ii.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/gbo.gr.cy - devcygr - rise of the robots ii.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1830860,
+        "sha256": "0bf58b782d383749e5d1d260592f45c31e79ff34a26b562ff7543cb90003f0f6",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/gbo.gr.cy - devcygr - rise of the robots ii.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/gbo.gr.cy - devcygr - rise of the robots ii.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 35764,
+        "sha256": "564223ffd3b1c579bbc11be6ceeca5b003fa0da266dd96e5354bc8d8e2a13207",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "9",
+        "releaseId": "9",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "1e7752e711726646d5a96545",
+      "title": "embarassment of riches",
+      "artistName": "empress trash",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 2858918,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/empress trash - embarassment of riches.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/empress trash - embarassment of riches.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2858918,
+        "sha256": "580aebbcdb118a2087eb84d0ad70b8697d2aa1e2417b81e5082f814cb970567e",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/empress trash - embarassment of riches.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/empress trash - embarassment of riches.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 37263,
+        "sha256": "87edfd092a16b6aeb9f5f6d2bc458c2fbcd43cef4a5fd45445285496a48252ec",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "10",
+        "releaseId": "10",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "45be9146257dcc092d094919",
+      "title": "enigma",
+      "artistName": "unwritten stories",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 973196,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/unwritten stories - enigma.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/unwritten stories - enigma.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 973196,
+        "sha256": "50f4278428f094be40721c8bfb090e1b3d63f8eece86fcbe68a30a204ccdcb34",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/unwritten stories - enigma.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/unwritten stories - enigma.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 60363,
+        "sha256": "67454f21484d308cebdcf90e1719bb6a3cfa4a2698b8c9511a0d094217acee44",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "11",
+        "releaseId": "11",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "3671207427730f722f1192ea",
+      "title": "funia",
+      "artistName": "failure routine",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 1482705,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/failure routine - funia.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/failure routine - funia.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1482705,
+        "sha256": "d7d43e9aabc7a51fe72ba04f2960bf662d9f6e94e9e60e6500c89d3d3da3243e",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/failure routine - funia.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/failure routine - funia.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 50464,
+        "sha256": "8c6059508ee6e602124091f8d727476eabeade040abf396d4860917031750a7a",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "12",
+        "releaseId": "12",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "e3e3015344222022ff937aea",
+      "title": "generic club music",
+      "artistName": "failure routine",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 3196844,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/failure routine - generic club music.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/failure routine - generic club music.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 3196844,
+        "sha256": "d215300651ce87ed65bb4e3f4a232dfac094285ed07c0ad993806cb7bcf9995a",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/failure routine - generic club music.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/failure routine - generic club music.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 26861,
+        "sha256": "665fe1c1284733c6bb98b62b037f5e115d0d7a3ab1ab08921a3b4d116f222d2d",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "13",
+        "releaseId": "13",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "0f15ff2e21de58d1b8d807d0",
+      "title": "girls night out",
+      "artistName": "empress trash",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 3856816,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/empress trash - girls night out.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/empress trash - girls night out.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 3856816,
+        "sha256": "96b44250181e6c92b6d011f4ad97e84d9bc522ef15191eef16a045488a3e2ceb",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/empress trash - girls night out.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/empress trash - girls night out.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 37263,
+        "sha256": "87edfd092a16b6aeb9f5f6d2bc458c2fbcd43cef4a5fd45445285496a48252ec",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "14",
+        "releaseId": "14",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "770fcc99896122f1dce9e4e9",
+      "title": "god's love",
+      "artistName": "sagrado",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 2190716,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/sagrado - god's love.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/sagrado - god's love.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2190716,
+        "sha256": "5ef1bf602ce64a981761df756d79f844850132932a1bd7bd92be2dced7f3a340",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/sagrado - god's love.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/sagrado - god's love.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 5698,
+        "sha256": "f710bca92cf58c033c27ce56d02385f0991ee9bda4aae870231360ecd0dd9afd",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "15",
+        "releaseId": "15",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "1645b5c904bfbd6be757ff58",
+      "title": "kaer trouz - falls through walls (80s edit)",
+      "artistName": "dotjot",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 2424428,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/dotjot - kaer trouz - falls through walls (80s edit).mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/dotjot - kaer trouz - falls through walls (80s edit).mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2424428,
+        "sha256": "0fc13e2ab50eba4454e94e3ba54b323226c754805bb08b71aa3ac754f3b93584",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/dotjot - kaer trouz - falls through walls (80s edit).jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/dotjot - kaer trouz - falls through walls (80s edit).jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 16221,
+        "sha256": "3af3abe2ea0b7529c6cc0b16424729ea842a8358b55daab53059089b4ec78569",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "16",
+        "releaseId": "16",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "c91f2a03926abdf0574e4c1d",
+      "title": "lost",
+      "artistName": "0soonbirds (,)",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 1998764,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/0soonbirds (,) - lost.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/0soonbirds (,) - lost.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1998764,
+        "sha256": "ce0445c37381afb954cae901b038a2dc43e5b7c7c0b0d0fa67985ecd7d0aa3e9",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/0soonbirds (,) - lost.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/0soonbirds (,) - lost.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 14985,
+        "sha256": "d8332eced9d556764c3fcf636956812281ae5837c5ee71e0919e1cdb8c93fa6f",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "17",
+        "releaseId": "17",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "d0b548ef97b8c8f86b5bb724",
+      "title": "machinimasound - dustsucker (epic hip hop beat) [cc by 4.0] - jens kiilstofte",
+      "artistName": "trackistador",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 2002796,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/trackistador - machinimasound - dustsucker (epic hip hop beat) [cc by 4.0] - jens kiilstofte.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/trackistador - machinimasound - dustsucker (epic hip hop beat) [cc by 4.0] - jens kiilstofte.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2002796,
+        "sha256": "f418b0dba06f470f511d43509435f7927f0d785eeeba470b165a12259058adac",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/trackistador - machinimasound - dustsucker (epic hip hop beat) [cc by 4.0] - jens kiilstofte.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/trackistador - machinimasound - dustsucker (epic hip hop beat) [cc by 4.0] - jens kiilstofte.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 18945,
+        "sha256": "d612d1cab5e844d07f23bda4c5ff8a8a4ade03d18506b4c4adfc20542ee3cf96",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "18",
+        "releaseId": "18",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "89d5dab0db5f1a0d5295f906",
+      "title": "metaldrips",
+      "artistName": "failure routine",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 1487255,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/failure routine - metaldrips.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/failure routine - metaldrips.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1487255,
+        "sha256": "775924039335fd1020c2a942391a76270cb3eea077f15187655d9986f36108be",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/failure routine - metaldrips.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/failure routine - metaldrips.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 17149,
+        "sha256": "0a7fd16bd2b80cc46a74b98cc97cbe3ebbcd5edc16987165f98603337dfa2ea1",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "19",
+        "releaseId": "19",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "958269bcc778a60612fb6005",
+      "title": "nct & james burki - hold on",
+      "artistName": "random chill channel",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 2520908,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/random chill channel - nct & james burki - hold on.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/random chill channel - nct & james burki - hold on.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2520908,
+        "sha256": "a2b09cd56317d10dd536c62dcd0d61311abd65edea2862b8723efbfe8488bcfe",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/random chill channel - nct & james burki - hold on.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/random chill channel - nct & james burki - hold on.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 21844,
+        "sha256": "4da91e7603c7dedf3e28ebae7664bd4ef8488cc9c6985b4761469c006bd8290d",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "20",
+        "releaseId": "20",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "1b047267dd93fcbb981fd236",
+      "title": "new joys",
+      "artistName": "pamela yuen",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 1351979,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/pamela yuen - new joys.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/pamela yuen - new joys.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1351979,
+        "sha256": "79bb8306aa6e8343f4d68863ee156b5e387e809d3a0b2fcabf359e7b0511cefb",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/pamela yuen - new joys.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/pamela yuen - new joys.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 30783,
+        "sha256": "aac852a90731e3012a594da851b65fd1642fc14e22d84312a8739ac194ceff2b",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "21",
+        "releaseId": "21",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "acaa5eb2874332269bee78f1",
+      "title": "soonbirds",
+      "artistName": "0soonbirds (,)",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 1425644,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/0soonbirds (,) - soonbirds.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/0soonbirds (,) - soonbirds.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1425644,
+        "sha256": "dd5df4012616c92bf274d390890ae99cb351cb6dbf48d8288de68db251b36e17",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/0soonbirds (,) - soonbirds.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/0soonbirds (,) - soonbirds.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 32115,
+        "sha256": "fc33552024dff7641c0cf3e8703cdddb2117157be5caba9452c10a10790996fb",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "22",
+        "releaseId": "22",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "479b183884a29d248c288f72",
+      "title": "twin musicom - dance dont delay (chill electro beat _ cc by 4.0)",
+      "artistName": "trackistador",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 3547052,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/trackistador - twin musicom - dance dont delay (chill electro beat _ cc by 4.0).mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/trackistador - twin musicom - dance dont delay (chill electro beat _ cc by 4.0).mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 3547052,
+        "sha256": "8ac3cf010c356010b05ae36336bf4f783d2d4d2291ac2913206f04819d0eaa12",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/trackistador - twin musicom - dance dont delay (chill electro beat _ cc by 4.0).jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/trackistador - twin musicom - dance dont delay (chill electro beat _ cc by 4.0).jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 39322,
+        "sha256": "910db40f69380545648a81cee7befb9ca3c75356af61f460b31fb46fb06e258f",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "23",
+        "releaseId": "23",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "ea2488f7dc4063834297d22a",
+      "title": "twin musicom - iron is laughter (cc by)",
+      "artistName": "trackistador",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 2170988,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/trackistador - twin musicom - iron is laughter (cc by).mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/trackistador - twin musicom - iron is laughter (cc by).mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2170988,
+        "sha256": "0d11f7d3f6971fffb715f541ade271bc0641d12585c335c8a52b3b81891836ff",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/trackistador - twin musicom - iron is laughter (cc by).jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/trackistador - twin musicom - iron is laughter (cc by).jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 38848,
+        "sha256": "424915b7e83110152e4351982901124b99a14bfddd28568336c92ba82bf9546d",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "24",
+        "releaseId": "24",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "89a82fd2917ec3a227b5d503",
+      "title": "uppers",
+      "artistName": "0soonbirds (,)",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 1970252,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/0soonbirds (,) - uppers.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/0soonbirds (,) - uppers.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1970252,
+        "sha256": "dea2b360eec0c14d706d24db7aee7724c2d1c65e17db4671bbab8fd74f05121c",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/0soonbirds (,) - uppers.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/0soonbirds (,) - uppers.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 7334,
+        "sha256": "cd39543ea18093bf153d83b6ca1a0780db1e09f847b1d12d12530148ac7653f1",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "25",
+        "releaseId": "25",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "79c89e134e5cd690a4c1c31f",
+      "title": "young again",
+      "artistName": "sagrado",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 2261420,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/sagrado - young again.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/sagrado - young again.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2261420,
+        "sha256": "53fa15ff3b9d8a6fc3ebbdd0d0e421841f72a24b5919071f5034b5fde5a2c0e7",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/sagrado - young again.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/sagrado - young again.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 7391,
+        "sha256": "b5da81f415de6952fab5df9b280795626cfd40d14034c697baaa41a67ef12a2f",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "26",
+        "releaseId": "26",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "b840ef428208381a57fe023f",
+      "title": "zaaj",
+      "artistName": "failure routine",
+      "album": null,
+      "pool": "stage",
+      "manifestSizeBytes": 1477052,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/failure routine - zaaj.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/failure routine - zaaj.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1477052,
+        "sha256": "daf41a58862b1bacfaa44e4864971105c2920c4f060dc0726b84427271a20aa9",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/stage_browser/failure routine - zaaj.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/stage_browser/failure routine - zaaj.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 24049,
+        "sha256": "17a78c04674d77cabdb7164c6cde7e8902c46d1a7ec444a5568c534985dfc418",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "27",
+        "releaseId": "27",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "31ca4832bee2cb95edef3e14",
+      "title": "Blue Bird - Naruto Shippuden OP 3 (She Said Remix)",
+      "artistName": "Shesaid",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2880484,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Shesaid - Blue Bird - Naruto Shippuden OP 3 (She Said Remix).mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Shesaid - Blue Bird - Naruto Shippuden OP 3 (She Said Remix).mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2880484,
+        "sha256": "169fd204e47be3c838ccda039b6b81f6b7f58123c0b62a1a3cd07a273f5d85ca",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Shesaid - Blue Bird - Naruto Shippuden OP 3 (She Said Remix).jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Shesaid - Blue Bird - Naruto Shippuden OP 3 (She Said Remix).jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 29391,
+        "sha256": "2beb58e86906cf562dc6efc93dfc154330d61b18135539eabc09837a40818586",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "28",
+        "releaseId": "28",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "32301acfaf8e6a53eb2747c3",
+      "title": "One Piece OP 1 - We Are! Lyrics",
+      "artistName": "yasin kadafi",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2885615,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/yasin kadafi - One Piece OP 1 - We Are! Lyrics.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/yasin kadafi - One Piece OP 1 - We Are! Lyrics.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2885615,
+        "sha256": "d558ec5b68f6338a8f30055157f8ea4babc05bb192b8aba7a5089a4769f49a11",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/yasin kadafi - One Piece OP 1 - We Are! Lyrics.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/yasin kadafi - One Piece OP 1 - We Are! Lyrics.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 69985,
+        "sha256": "537f25cae918aa2d5c64123e0e1489ab8620fe03618c64be73293623aa0eec49",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "29",
+        "releaseId": "29",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "dbe238bbef17f0e7d4de627a",
+      "title": "EAZY DANCE feat. Hatsune Miku",
+      "artistName": "Mitchie M",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 3463219,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Mitchie M - EAZY DANCE feat. Hatsune Miku.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Mitchie M - EAZY DANCE feat. Hatsune Miku.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 3463219,
+        "sha256": "84a1d68a4c40971d3f13d86d16d179b732a759033f6b8ec57f20a0e48969380f",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Mitchie M - EAZY DANCE feat. Hatsune Miku.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Mitchie M - EAZY DANCE feat. Hatsune Miku.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 31520,
+        "sha256": "885f2cf89c0efd9313b1c6a79783083294dc0cfaa76a9d63e5cc59e7cdc10af1",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "30",
+        "releaseId": "30",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "ae823177b129122b24e80492",
+      "title": "Huntrix - Golden KPop Demon Hunters",
+      "artistName": "SUTSU x YGG",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2306091,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/SUTSU x YGG - Huntrix - Golden KPop Demon Hunters.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/SUTSU x YGG - Huntrix - Golden KPop Demon Hunters.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2306091,
+        "sha256": "baad03ae53dede2d38177d2b2ad877f042ecbd1dfcdd9c4a4617391c74f07802",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/SUTSU x YGG - Huntrix - Golden KPop Demon Hunters.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/SUTSU x YGG - Huntrix - Golden KPop Demon Hunters.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 29694,
+        "sha256": "05610052edcc5201f9ebc6b87d59582b02c8dd6cd00777973a3dcfed802c9c8c",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "31",
+        "releaseId": "31",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "179c021ce14c42afa424a885",
+      "title": "Ai Dee feat. Hatsune Miku with Megurine Luka",
+      "artistName": "Mitchie M",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 3443635,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Mitchie M - Ai Dee feat. Hatsune Miku with Megurine Luka.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Mitchie M - Ai Dee feat. Hatsune Miku with Megurine Luka.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 3443635,
+        "sha256": "a13e9a68b942662a5039ed23cfdca152cc46034b93a6cbd9174ed780b52343e1",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Mitchie M - Ai Dee feat. Hatsune Miku with Megurine Luka.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Mitchie M - Ai Dee feat. Hatsune Miku with Megurine Luka.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 20875,
+        "sha256": "8d271b0125e3adb388564dcb631ffbdd84b163363c65ad71a644b93289784d0f",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "32",
+        "releaseId": "32",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "a5fcf768c51b8402ff9808a0",
+      "title": "Tsuji Ayano - Ashita Kitto",
+      "artistName": "Akiyama Mio",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2974254,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Akiyama Mio - Tsuji Ayano - Ashita Kitto.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Akiyama Mio - Tsuji Ayano - Ashita Kitto.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2974254,
+        "sha256": "bf085097b02b9cf0eb744f631b1c54c7b91cfdd4b7fd0007fe981c5f038d90ab",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Akiyama Mio - Tsuji Ayano - Ashita Kitto.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Akiyama Mio - Tsuji Ayano - Ashita Kitto.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 43846,
+        "sha256": "c2881831c349ef5eb956f5f99e0eac839b1042ea5b83135a90e9696166c14c34",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "33",
+        "releaseId": "33",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "b6563cec779977fe652cd570",
+      "title": "Burning Me Out",
+      "artistName": "Zyke",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2990033,
+      "manifestSizeMatchesFile": false,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Zyke - Burning Me Out.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Zyke - Burning Me Out.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2242586,
+        "sha256": "779a7dcc552f4309d2ee24a979db646a85df17fb1569371e504ee14c6b9b9aab",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Zyke - Burning Me Out.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Zyke - Burning Me Out.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 9377,
+        "sha256": "831cc9ca8fc1ce808596dc2adc6ac5117d64a1ae1d6ec7400ac33bd63f1e2310",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "34",
+        "releaseId": "34",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "bec8b7cd6bad43a1bd1d51bd",
+      "title": "- LIFE",
+      "artistName": "Akiyama Mio",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2776452,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Akiyama Mio - - LIFE.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Akiyama Mio - - LIFE.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2776452,
+        "sha256": "4826f4aa0205028008600d01651ae7baafeafefbda9fda9810a1bb0bb4597727",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Akiyama Mio - - LIFE.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Akiyama Mio - - LIFE.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 43846,
+        "sha256": "c2881831c349ef5eb956f5f99e0eac839b1042ea5b83135a90e9696166c14c34",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "35",
+        "releaseId": "35",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "9ffb14481064ad6ccce3b3e2",
+      "title": "Come Around (Be So Lucky)",
+      "artistName": "Torii Wolf",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 9282174,
+      "manifestSizeMatchesFile": false,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Torii Wolf - Come Around (Be So Lucky).mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Torii Wolf - Come Around (Be So Lucky).mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2781726,
+        "sha256": "f0d74a32d8d5137ebb70fe22256afdc35b64877e973ea44bfea34e0ae8f63562",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Torii Wolf - Come Around (Be So Lucky).jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Torii Wolf - Come Around (Be So Lucky).jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 11029,
+        "sha256": "6195081007c958f5778031ceed79955e33c3b94f824c2399c1fd1f76033d3737",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "36",
+        "releaseId": "36",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "e956612d412a2c4443a4becf",
+      "title": "FREELY TOMORROW feat. Hatsune Miku",
+      "artistName": "Mitchie M",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2880883,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Mitchie M - FREELY TOMORROW feat. Hatsune Miku.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Mitchie M - FREELY TOMORROW feat. Hatsune Miku.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2880883,
+        "sha256": "472fea8b08014ee082e1d225c0ce4c5956daee4d88bd47420328f70f7280461f",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Mitchie M - FREELY TOMORROW feat. Hatsune Miku.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Mitchie M - FREELY TOMORROW feat. Hatsune Miku.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 21809,
+        "sha256": "b24291c6bf58a647adf823cebec2f6ac2e9e725653e6365b3a97f0bafb385def",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "37",
+        "releaseId": "37",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "2b0cc1c3da3545e4257b97bc",
+      "title": "Candy  la Magia",
+      "artistName": "Topa Gigia",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 1364501,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Topa Gigia - Candy la Magia.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Topa Gigia - Candy la Magia.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1364501,
+        "sha256": "7e7b901776fc25fdb97c4448aa568810ad57d1838c1401f8a0d8cc54780dc664",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Topa Gigia - Candy la Magia.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Topa Gigia - Candy la Magia.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 53858,
+        "sha256": "729ad674be68bf6c0eee99d987b1db5fcae44a75c64285c5b8e5ace60f9f364c",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "38",
+        "releaseId": "38",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "ebe4edb14b5e5e0878acc086",
+      "title": "Winking Jesus",
+      "artistName": "infinixphonebyrei",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2288057,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/infinixphonebyrei - Winking Jesus.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/infinixphonebyrei - Winking Jesus.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2288057,
+        "sha256": "b7a6dd879c80a3437457c001822a2731b0fb8f851b19fe773d3731f1a95f18c9",
+        "access": "private"
+      },
+      "artwork": null,
+      "artworkStatus": "missing",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "39",
+        "releaseId": "39",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "175af15848dbf691472b4dc5",
+      "title": "aveknew",
+      "artistName": "shamgang",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 6254178,
+      "manifestSizeMatchesFile": false,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/shamgang - aveknew.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/shamgang - aveknew.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1874217,
+        "sha256": "c5f42bc01245c66026297ca16a44f33ef63610157ff40ca0ff7898d8c2b70235",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/shamgang - aveknew.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/shamgang - aveknew.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 26747,
+        "sha256": "7be9af7bf0d801b3b75d384d13b82c62a2ee44b0ef997db73fa4b84fc87f847a",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "40",
+        "releaseId": "40",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "dc3ea49e36f60a29d7d79883",
+      "title": "Sundown Love",
+      "artistName": "Sugar Blizz feat. Willow",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 8326971,
+      "manifestSizeMatchesFile": false,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Sugar Blizz feat. Willow - Sundown Love.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Sugar Blizz feat. Willow - Sundown Love.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2495465,
+        "sha256": "198fd99e20f2f0df76f150dc6e75380a693a96d69bebd595cd3eb1c2ae7612ba",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Sugar Blizz feat. Willow - Sundown Love.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Sugar Blizz feat. Willow - Sundown Love.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 16663,
+        "sha256": "f7c9d42cbde433a8bb5714f9ee1a123762bda2a300d252b888666a5cd52b19ed",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "41",
+        "releaseId": "41",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "379e0e341f03237db58b94db",
+      "title": "1 000 000 Darling",
+      "artistName": "Rospigg",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 7501488,
+      "manifestSizeMatchesFile": false,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Rospigg - 1 000 000 Darling.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Rospigg - 1 000 000 Darling.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2248055,
+        "sha256": "1463fbc9d0bee0771045c6b236bfde90cccf09373f4f74dd59999a2196a8e266",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Rospigg - 1 000 000 Darling.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Rospigg - 1 000 000 Darling.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 21945,
+        "sha256": "0d6344ea74cce289ba79f268c66fc6e0ab6d79f8770b545a8486f49969f5314e",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "42",
+        "releaseId": "42",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "87a4125ecc52f61a7fbe0712",
+      "title": "Gurenge (Hiroyuki Jersey club Remix)",
+      "artistName": "G-axisPSCL#4",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 3222453,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/G-axisPSCL#4 - Gurenge (Hiroyuki Jersey club Remix).mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/G-axisPSCL#4 - Gurenge (Hiroyuki Jersey club Remix).mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 3222453,
+        "sha256": "8aa69a82da18d89e1e339b741cea1bdb5e56460fd25610fb7ba4ff3a00d917a9",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/G-axisPSCL#4 - Gurenge (Hiroyuki Jersey club Remix).jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/G-axisPSCL#4 - Gurenge (Hiroyuki Jersey club Remix).jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 35388,
+        "sha256": "1a193394a0f85e1689cbedef65309c6033314a82008703ac61605e854b50bf64",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "43",
+        "releaseId": "43",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "ffc90ea5559abc671dc9c073",
+      "title": "Go Hard",
+      "artistName": "Ruzer",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 6474224,
+      "manifestSizeMatchesFile": false,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Ruzer - Go Hard.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Ruzer - Go Hard.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1940202,
+        "sha256": "c4af379ad85baf7dc96a60e58badc3f14af8ec988218d86966938244e30c4fd7",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Ruzer - Go Hard.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Ruzer - Go Hard.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 22863,
+        "sha256": "51660465889dfa1c3faf886c9ad61354d9ffeae2bb30150c6eaf15a784562afd",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "44",
+        "releaseId": "44",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "5c0dde9b3fb0f9be65649cdb",
+      "title": "Keep it One Step A Day (125bpm)",
+      "artistName": "Mo Vibez",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 1798689,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Mo Vibez - Keep it One Step A Day (125bpm).mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Mo Vibez - Keep it One Step A Day (125bpm).mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1798689,
+        "sha256": "7d572b0d174a86e97bbb087650031e33bb69bd358b112342e7ec2147a0ca7221",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Mo Vibez - Keep it One Step A Day (125bpm).jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Mo Vibez - Keep it One Step A Day (125bpm).jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 22734,
+        "sha256": "9c843521c92f40489fd362399a0e0c3ce4a6e5790c77ee04731d9d7eecf3e7df",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "45",
+        "releaseId": "45",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "be6bf56be50e776e34e840fe",
+      "title": "BLACKPINK () - 'How You Like That' [RV Flip]",
+      "artistName": "RV",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2110220,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/RV - BLACKPINK () - 'How You Like That' [RV Flip].mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/RV - BLACKPINK () - 'How You Like That' [RV Flip].mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2110220,
+        "sha256": "379a623e567a6c262165f57c72c6edb761a054534ecdc81e7e94381efe918efa",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/RV - BLACKPINK () - 'How You Like That' [RV Flip].jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/RV - BLACKPINK () - 'How You Like That' [RV Flip].jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 51836,
+        "sha256": "bf8ffceb2a24da9d5401a2d8eaedeff3fb2480a7bd3c5272384a4e19ad1e68f0",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "46",
+        "releaseId": "46",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "de3e9e0f6251d7ec648ea8a3",
+      "title": "Ofelia",
+      "artistName": "West & Zander",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 7760979,
+      "manifestSizeMatchesFile": false,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/West & Zander - Ofelia.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/West & Zander - Ofelia.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2325828,
+        "sha256": "06bce41edd7191135d03ffdf35fb31b3d503f2638bf134a852c86fd87de63444",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/West & Zander - Ofelia.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/West & Zander - Ofelia.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 37461,
+        "sha256": "29c6d6d6a030a9f61ef70289155acd863201c0ca0db9653719b501eb2a8dd77e",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "47",
+        "releaseId": "47",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "561aefafd00e55c3bde7056a",
+      "title": "fgnm - Naruto Shippuden - Blue Bird",
+      "artistName": "Anime Lover",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2549264,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Anime Lover - fgnm - Naruto Shippuden - Blue Bird.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Anime Lover - fgnm - Naruto Shippuden - Blue Bird.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2549264,
+        "sha256": "c9b2c66b0476d77d4809cbe6cf0e4a47e51eddb6eb9aa9ecbd74970f61165b8c",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Anime Lover - fgnm - Naruto Shippuden - Blue Bird.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Anime Lover - fgnm - Naruto Shippuden - Blue Bird.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 92658,
+        "sha256": "1be7cea5f8261dbace025c5e9bdb2bff27b0742448eb6e60138210b833c622a4",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "48",
+        "releaseId": "48",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "136969f255cf6534553412f9",
+      "title": "Blond with Flower Headband",
+      "artistName": "irapejana1818",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 1831645,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/irapejana1818 - Blond with Flower Headband.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/irapejana1818 - Blond with Flower Headband.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1831645,
+        "sha256": "4faae6587e8913a80dbc6a123d51e08b43c414af3afdfab77b4fa3da88dcb381",
+        "access": "private"
+      },
+      "artwork": null,
+      "artworkStatus": "missing",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "49",
+        "releaseId": "49",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "59770464e0864ed06af90dd6",
+      "title": "Anime Fanloid Xydrick Definition",
+      "artistName": "xydrickuwu",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 1227903,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/xydrickuwu - Anime Fanloid Xydrick Definition.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/xydrickuwu - Anime Fanloid Xydrick Definition.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1227903,
+        "sha256": "fbc4272fda833527fff331669df2f2456730bbe7ca710f5cb252f7839f03bae9",
+        "access": "private"
+      },
+      "artwork": null,
+      "artworkStatus": "missing",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "50",
+        "releaseId": "50",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "588ffb06a1b8b607911aabb8",
+      "title": "LiSA - Gurenge (Tenzen Himeda Bootleg)",
+      "artistName": "krystianrocky",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2529899,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/krystianrocky - LiSA - Gurenge (Tenzen Himeda Bootleg).mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/krystianrocky - LiSA - Gurenge (Tenzen Himeda Bootleg).mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2529899,
+        "sha256": "5aa0906cada110a41019e4ca8092b9a6d9da45aa1ffcb44f542cae6846c1d882",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/krystianrocky - LiSA - Gurenge (Tenzen Himeda Bootleg).jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/krystianrocky - LiSA - Gurenge (Tenzen Himeda Bootleg).jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 44813,
+        "sha256": "7ffae7814a9029e4125a618cb427a9405175562c3c0386666c22d5e3db6622db",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "51",
+        "releaseId": "51",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "c5f9f49ca8ef79edb33777a8",
+      "title": "We Could Go (Clean Version)",
+      "artistName": "King Sis feat. Tilden Parc",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 9201482,
+      "manifestSizeMatchesFile": false,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/King Sis feat. Tilden Parc - We Could Go (Clean Version).mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/King Sis feat. Tilden Parc - We Could Go (Clean Version).mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2757562,
+        "sha256": "cf13ccb4f09b37288d7c94fdd37dc4f5072b3c315eac3163240d80a44d8443ec",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/King Sis feat. Tilden Parc - We Could Go (Clean Version).jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/King Sis feat. Tilden Parc - We Could Go (Clean Version).jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 24073,
+        "sha256": "ce8370aa29572b466f04961e2d3d2ff4378e487823fa1131c27a003dd56f14d1",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "52",
+        "releaseId": "52",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "ca17ae34613c86cf9e92b6b7",
+      "title": "To Me",
+      "artistName": "Alina Baraz",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 3086050,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Alina Baraz - To Me.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Alina Baraz - To Me.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 3086050,
+        "sha256": "d876178a037947a7fa15e0cffb8c33d490c67a4028c5c6b45b6aad7989bbd3a6",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Alina Baraz - To Me.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Alina Baraz - To Me.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 39685,
+        "sha256": "74da5bf48f782654774602288798997a8ad9c79f341ac0fb9844da061d5cb85d",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "53",
+        "releaseId": "53",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "71661d8c832f20c7aabbff44",
+      "title": "Demon Slayer Gurenge (Orchestral_Synthwave_Cyberpunk) Cover",
+      "artistName": "ZANNKI's music",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 3116492,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/ZANNKI's music - Demon Slayer Gurenge (Orchestral_Synthwave_Cyberpunk) Cover.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/ZANNKI's music - Demon Slayer Gurenge (Orchestral_Synthwave_Cyberpunk) Cover.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 3116492,
+        "sha256": "2095ebf5124577749a16f96e95113430161276967a862760fe4570fc42f4dfe8",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/ZANNKI's music - Demon Slayer Gurenge (Orchestral_Synthwave_Cyberpunk) Cover.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/ZANNKI's music - Demon Slayer Gurenge (Orchestral_Synthwave_Cyberpunk) Cover.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 47318,
+        "sha256": "d0018f86ecbbdf5520b84bc73cd1ff4a0863d13e11e1cb09f55253726567866d",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "54",
+        "releaseId": "54",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "2d8dc797fa0aaf38e0596520",
+      "title": "Soda Pop - KPop Demon Hunters",
+      "artistName": "Ponyo",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2041843,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Ponyo - Soda Pop - KPop Demon Hunters.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Ponyo - Soda Pop - KPop Demon Hunters.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2041843,
+        "sha256": "99c469cf3e4e11d28c03609efa6ed5b864fda25773f0a63b5f3a11ec10de2de5",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Ponyo - Soda Pop - KPop Demon Hunters.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Ponyo - Soda Pop - KPop Demon Hunters.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 17624,
+        "sha256": "9029d66d07da679168b150d6280434431a1a3163107bf012160bf9dba5a3ab38",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "55",
+        "releaseId": "55",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "86c86aad40cb83b06caf267d",
+      "title": "Aria Celtica",
+      "artistName": "Dino Olivieri _ Onyrix",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2104410,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Dino Olivieri _ Onyrix - Aria Celtica.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Dino Olivieri _ Onyrix - Aria Celtica.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2104410,
+        "sha256": "1f722f740bb38004b3fe99e9aab7283f1e4ced6cbf807db25e27805b2fa20211",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Dino Olivieri _ Onyrix - Aria Celtica.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Dino Olivieri _ Onyrix - Aria Celtica.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 40146,
+        "sha256": "49b90aba969e30bc7f0730dd5984e6938169c59d71fe18a20bddb2db387cbaf8",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "56",
+        "releaseId": "56",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "3203adb2c7c19437a817172d",
+      "title": "Bald Eagle on Driftwood",
+      "artistName": "hato",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 1460811,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/hato - Bald Eagle on Driftwood.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/hato - Bald Eagle on Driftwood.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1460811,
+        "sha256": "d3abfaea983893cb09673fcc8ed3bbee14d89c51f7d97904a215fd2cce209c70",
+        "access": "private"
+      },
+      "artwork": null,
+      "artworkStatus": "missing",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "57",
+        "releaseId": "57",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "aff7c8fee498c639ce808073",
+      "title": "Apologize",
+      "artistName": "Emilio Rojas",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 1724513,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Emilio Rojas - Apologize.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Emilio Rojas - Apologize.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1724513,
+        "sha256": "598e73aa0515479b4a62e8c11337d05e1e8f4813c8519b0ea6c2e3be04bb8b9e",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Emilio Rojas - Apologize.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Emilio Rojas - Apologize.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 51178,
+        "sha256": "956c609c8ec457bafbefe003341246db674fdaac1096bf822810db0888bb6b92",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "58",
+        "releaseId": "58",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "7c7ae888d21d80369b730045",
+      "title": "BACK IN BLOOD",
+      "artistName": "DIRTY AUDIO",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 1901420,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/DIRTY AUDIO - BACK IN BLOOD.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/DIRTY AUDIO - BACK IN BLOOD.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1901420,
+        "sha256": "98170d5c368edb70843a88dde8e6ac5f0aa01cb4c1473e8dae25c0e670aa2175",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/DIRTY AUDIO - BACK IN BLOOD.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/DIRTY AUDIO - BACK IN BLOOD.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 23331,
+        "sha256": "96aa7868fe672ab413cf1835fdd102b29abb2b87fa3130679e0721703f5ec8b9",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "59",
+        "releaseId": "59",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "28710007838297cfec0ef0bf",
+      "title": "fgnm - Slam Dunk - Kimi ga Suki da to Sakebitai",
+      "artistName": "Anime Lover",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2427164,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Anime Lover - fgnm - Slam Dunk - Kimi ga Suki da to Sakebitai.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Anime Lover - fgnm - Slam Dunk - Kimi ga Suki da to Sakebitai.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2427164,
+        "sha256": "1e44b86fb63d113a707279f8391ef810c72733cdf83953c28269c441d45a068e",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Anime Lover - fgnm - Slam Dunk - Kimi ga Suki da to Sakebitai.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Anime Lover - fgnm - Slam Dunk - Kimi ga Suki da to Sakebitai.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 92658,
+        "sha256": "1be7cea5f8261dbace025c5e9bdb2bff27b0742448eb6e60138210b833c622a4",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "60",
+        "releaseId": "60",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "c078d57e05bd7976c37dafcc",
+      "title": "Mejor Amigo",
+      "artistName": "Lu-Ni",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 7718687,
+      "manifestSizeMatchesFile": false,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Lu-Ni - Mejor Amigo.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Lu-Ni - Mejor Amigo.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2313165,
+        "sha256": "3d716c4ccb65668437e0793fec0c92229349293a254572e98f9aa31a3f765971",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Lu-Ni - Mejor Amigo.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Lu-Ni - Mejor Amigo.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 7954,
+        "sha256": "9c201dd4b3751e21e92c11c7570f442b1195226de64aff4d38b72955e5b81a84",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "61",
+        "releaseId": "61",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "b5cac7565c4227c1375ceb06",
+      "title": "DANCE",
+      "artistName": "G-axisPSCL#4",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2903637,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/G-axisPSCL#4 - DANCE.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/G-axisPSCL#4 - DANCE.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2903637,
+        "sha256": "76855d218f7dbe95342d7d35392b3a361d08fcf149a1aad109c989db7ac6d5e3",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/G-axisPSCL#4 - DANCE.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/G-axisPSCL#4 - DANCE.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 34443,
+        "sha256": "bbe66067821e0220ed2c9d7f1944eb6faca79b8ca4750e520e9039620f0f4928",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "62",
+        "releaseId": "62",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "bcce97f555ab00ca9bd1e80b",
+      "title": "More Than Enough",
+      "artistName": "Alina Baraz",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 1818861,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Alina Baraz - More Than Enough.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Alina Baraz - More Than Enough.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1818861,
+        "sha256": "70cb66e13da7b87f9169889d738303349a7c6abb6f3e531140bc8e04119d7177",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Alina Baraz - More Than Enough.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Alina Baraz - More Than Enough.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 39685,
+        "sha256": "74da5bf48f782654774602288798997a8ad9c79f341ac0fb9844da061d5cb85d",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "63",
+        "releaseId": "63",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "4c554d1010031db484007809",
+      "title": "Billie Eilish - BIRDS OF A FEATHER (Erick T Edit)",
+      "artistName": "Erick T",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 3865661,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Erick T - Billie Eilish - BIRDS OF A FEATHER (Erick T Edit).mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Erick T - Billie Eilish - BIRDS OF A FEATHER (Erick T Edit).mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 3865661,
+        "sha256": "880baf19bf548a9cfa18fedad6fab8910590757ae262a642e701ded32246229d",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Erick T - Billie Eilish - BIRDS OF A FEATHER (Erick T Edit).jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Erick T - Billie Eilish - BIRDS OF A FEATHER (Erick T Edit).jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 44719,
+        "sha256": "09566871951816a43c9c10a849fa18b970cf9e56a818396edea1d8291cc6cd9b",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "64",
+        "releaseId": "64",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "cb21ae6fed80cb4ceb46a307",
+      "title": "deadmau5 - Arcadia 2020",
+      "artistName": "deadmau5",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 4093388,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/deadmau5 - deadmau5 - Arcadia 2020.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/deadmau5 - deadmau5 - Arcadia 2020.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 4093388,
+        "sha256": "d22eac289e8d71dbb45ddb8f3b7a162d6281ddd3a46ef80bab1c4bda3096de70",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/deadmau5 - deadmau5 - Arcadia 2020.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/deadmau5 - deadmau5 - Arcadia 2020.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 19483,
+        "sha256": "0205f60941edd8fea1d90ae4fc058d4c62e0544001c1c94667082e4d4c1d510c",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "65",
+        "releaseId": "65",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "e51250ca8304bcfdabfbf203",
+      "title": "Dance Monkey",
+      "artistName": "Noise Mac",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2301008,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Noise Mac - Dance Monkey.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Noise Mac - Dance Monkey.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2301008,
+        "sha256": "45c67a2e5116d10182998442ca91d948d31f38b1290f7e6d852050d9b2346cc1",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Noise Mac - Dance Monkey.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Noise Mac - Dance Monkey.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 18620,
+        "sha256": "7a86345ce17496246569bcf3980f2a676840ef5380c87602c488342e40341285",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "66",
+        "releaseId": "66",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "a179d9c63303445d0f7f4dc2",
+      "title": "Lost in a Void",
+      "artistName": "ELIMINA",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2557013,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/ELIMINA - Lost in a Void.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/ELIMINA - Lost in a Void.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2557013,
+        "sha256": "0fe41f26106b97e2af149a3932cf426d4a94708306e1a3dca281964faa27b416",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/ELIMINA - Lost in a Void.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/ELIMINA - Lost in a Void.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 50293,
+        "sha256": "2e4cb717af2d02dfe51bb23131701d38488300aa76b32f3264ae5ce7f8cb7815",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "67",
+        "releaseId": "67",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "47aa5030beee0e6c391cef61",
+      "title": "cvkl - Flame of Recca - Nanka Shiawase",
+      "artistName": "Anime Lover",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2695859,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Anime Lover - cvkl - Flame of Recca - Nanka Shiawase.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Anime Lover - cvkl - Flame of Recca - Nanka Shiawase.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2695859,
+        "sha256": "33e4fd66c407482a7f17c351959ab0cd6a7750f1c479a676228a37ea41ce643e",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Anime Lover - cvkl - Flame of Recca - Nanka Shiawase.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Anime Lover - cvkl - Flame of Recca - Nanka Shiawase.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 92658,
+        "sha256": "1be7cea5f8261dbace025c5e9bdb2bff27b0742448eb6e60138210b833c622a4",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "68",
+        "releaseId": "68",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "7f230edcb8b203bc7af97275",
+      "title": "cvkl - Dragonball Z - CHA-LA HEAD CHA-LA",
+      "artistName": "Anime Lover",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2138005,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Anime Lover - cvkl - Dragonball Z - CHA-LA HEAD CHA-LA.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Anime Lover - cvkl - Dragonball Z - CHA-LA HEAD CHA-LA.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2138005,
+        "sha256": "da18e4d202e889ba4004cd9f9e38f5e2c6e83d15bf295e19fedf0302b3c2e828",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Anime Lover - cvkl - Dragonball Z - CHA-LA HEAD CHA-LA.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Anime Lover - cvkl - Dragonball Z - CHA-LA HEAD CHA-LA.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 92658,
+        "sha256": "1be7cea5f8261dbace025c5e9bdb2bff27b0742448eb6e60138210b833c622a4",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "69",
+        "releaseId": "69",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "f7c66ed6595c148e021dbfaf",
+      "title": "TRAVIS SCOTT - ANTIDOTE (BEECH BOOTLEG)",
+      "artistName": "BEECH",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 1774700,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/BEECH - TRAVIS SCOTT - ANTIDOTE (BEECH BOOTLEG).mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/BEECH - TRAVIS SCOTT - ANTIDOTE (BEECH BOOTLEG).mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1774700,
+        "sha256": "54edcf44b673c62e9302fd564f35fc1c4d8d885ca5f24caf2b4553cedd98fa34",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/BEECH - TRAVIS SCOTT - ANTIDOTE (BEECH BOOTLEG).jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/BEECH - TRAVIS SCOTT - ANTIDOTE (BEECH BOOTLEG).jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 16885,
+        "sha256": "5d8666433758bc55e236c8224fe02c919c410b5166a9d3b1c7d1fa4f372a81cf",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "70",
+        "releaseId": "70",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "97ae95aa8437c7904f2748c5",
+      "title": "My Baby Libertine (SLCT Remix)",
+      "artistName": "Arch TremorsSLCT feat. Lollo Gardtman",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 7605323,
+      "manifestSizeMatchesFile": false,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Arch TremorsSLCT feat. Lollo Gardtman - My Baby Libertine (SLCT Remix).mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Arch TremorsSLCT feat. Lollo Gardtman - My Baby Libertine (SLCT Remix).mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2279210,
+        "sha256": "4c4409c26fbcfadd0c83e6e53bc6b1049b7b39cdbefd35bddfc8713a8e165f91",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Arch TremorsSLCT feat. Lollo Gardtman - My Baby Libertine (SLCT Remix).jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Arch TremorsSLCT feat. Lollo Gardtman - My Baby Libertine (SLCT Remix).jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 9718,
+        "sha256": "952415b291750c956e90462e1189d68781362629b1b7dc2970b0b40e869bcb53",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "71",
+        "releaseId": "71",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "ebf70c111f3b929c9bc4d049",
+      "title": "Marinate",
+      "artistName": "Zorro",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 7126718,
+      "manifestSizeMatchesFile": false,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Zorro - Marinate.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Zorro - Marinate.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2135765,
+        "sha256": "63d0598e3c8c6e5bed2ccf7d77acb88886bfb091fc20380aafa596cb43df65fe",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Zorro - Marinate.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Zorro - Marinate.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 8698,
+        "sha256": "df855c68a335d20a437bbd060269f2ac49c0abb22189d303d41ce57190a645a9",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "72",
+        "releaseId": "72",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "d99c578abbecfe78a110415c",
+      "title": "Alone With You",
+      "artistName": "Alina Baraz",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2716395,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Alina Baraz - Alone With You.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Alina Baraz - Alone With You.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2716395,
+        "sha256": "89614cf6cd01c357138bf49bb1f910ba6ce9bcfce60f0480e320a376e78d126c",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Alina Baraz - Alone With You.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Alina Baraz - Alone With You.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 23681,
+        "sha256": "71ab0e5b81058a253373f0743539b039f831fc3b8aa4377f6d67b99fbc018868",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "73",
+        "releaseId": "73",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "cd8cc2d56065e52b70271baf",
+      "title": "Hello Adele",
+      "artistName": "Jupiter Jayne",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 1966197,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Jupiter Jayne - Hello Adele.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Jupiter Jayne - Hello Adele.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 1966197,
+        "sha256": "998ba10fa82b6090fb8d179cdbb05b56271c700ccff1fabef777e4e0b5057a6b",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Jupiter Jayne - Hello Adele.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Jupiter Jayne - Hello Adele.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 22364,
+        "sha256": "767a1c038efd74210e146bb5da32dbcc235b1e690539c54852c739237c4899c9",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "74",
+        "releaseId": "74",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "44c09c122d46e8086e091f5c",
+      "title": "Lisa - LALISA (FEAT. M24) [DRILL REMIX]",
+      "artistName": "Graphix",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2281971,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Graphix - Lisa - LALISA (FEAT. M24) [DRILL REMIX].mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Graphix - Lisa - LALISA (FEAT. M24) [DRILL REMIX].mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2281971,
+        "sha256": "400e076a5cc5644b5128778651fcdcd6efa1ea63c1209e2f952d6afe3674d2cd",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Graphix - Lisa - LALISA (FEAT. M24) [DRILL REMIX].jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Graphix - Lisa - LALISA (FEAT. M24) [DRILL REMIX].jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 16289,
+        "sha256": "e6ec6d6a4356b21891d845fca9423aa328a3cad7e4e6b216dc75acd49d4c565f",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "75",
+        "releaseId": "75",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "2cf63e60ee7221960cf33741",
+      "title": "07.My Soul,Your Beats! (Gldemo Ver.)",
+      "artistName": "Garrett",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 3416471,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Garrett - 07.My Soul,Your Beats! (Gldemo Ver.).mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Garrett - 07.My Soul,Your Beats! (Gldemo Ver.).mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 3416471,
+        "sha256": "73ab8a2d7e3fcb84a58a32c7679a88245e732a23d456c7d9bd1ea0c639a60d4a",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Garrett - 07.My Soul,Your Beats! (Gldemo Ver.).jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Garrett - 07.My Soul,Your Beats! (Gldemo Ver.).jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 50139,
+        "sha256": "e571272822c72edb06a320fac239ba404a9045bb1113083d94b09b77431d3b5a",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "76",
+        "releaseId": "76",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "0f4c23f0565569c17a2f304e",
+      "title": "Only the Real (Clean Version)",
+      "artistName": "Iso Indies",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 7160416,
+      "manifestSizeMatchesFile": false,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Iso Indies - Only the Real (Clean Version).mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Iso Indies - Only the Real (Clean Version).mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2145874,
+        "sha256": "891a7d1c4bdc8b723d5a85049b17fbcaf7a5ec646496db017f84f9708bee2641",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Iso Indies - Only the Real (Clean Version).jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Iso Indies - Only the Real (Clean Version).jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 17150,
+        "sha256": "577dfe79d6f68844d470ed68f9a850063cb0dd8794c58d5e9665fb949a98d529",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "77",
+        "releaseId": "77",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "94f88e060aae764725215b1b",
+      "title": "Forex (Clean Version)",
+      "artistName": "Xavy Rusan",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 9174573,
+      "manifestSizeMatchesFile": false,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Xavy Rusan - Forex (Clean Version).mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Xavy Rusan - Forex (Clean Version).mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2749516,
+        "sha256": "53c8fd2bb66d3ce754b64aeeac51c00be90a7bd8af454d2fb94cebb909073c77",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Xavy Rusan - Forex (Clean Version).jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Xavy Rusan - Forex (Clean Version).jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 17024,
+        "sha256": "d42a60f923a549cf8254d8c45f14e81245e0a03b7f6011231c29ed6e8098b403",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "78",
+        "releaseId": "78",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "7be7d75a510c956d731229d3",
+      "title": "Person indoors with curtains",
+      "artistName": "caipt2k",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2237275,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/caipt2k - Person indoors with curtains.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/caipt2k - Person indoors with curtains.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2237275,
+        "sha256": "89dd3fd4565f718e07f5e9a15d93ec7813cd598f879753743e76d029b50d17b7",
+        "access": "private"
+      },
+      "artwork": null,
+      "artworkStatus": "missing",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "79",
+        "releaseId": "79",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "753ecb2c3882ed442125039a",
+      "title": "Evanescence_-_Bring_Me_To_Life__Official_HD_Music_Video_",
+      "artistName": "slouly",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 3047614,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/slouly - Evanescence_-_Bring_Me_To_Life__Official_HD_Music_Video_.mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/slouly - Evanescence_-_Bring_Me_To_Life__Official_HD_Music_Video_.mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 3047614,
+        "sha256": "ade4f61778c6160d6eddc5ed961d06e6c27607b20c659f8137f698318e9758cd",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/slouly - Evanescence_-_Bring_Me_To_Life__Official_HD_Music_Video_.jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/slouly - Evanescence_-_Bring_Me_To_Life__Official_HD_Music_Video_.jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 14266,
+        "sha256": "04c9e864d36668c2438687bbaeaa82fceb884561a12e02b40bd7b0b4475c52dd",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "80",
+        "releaseId": "80",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    },
+    {
+      "catalogId": "8698544bf98e808d7460646e",
+      "title": "In The End (LinkinPark Remix)",
+      "artistName": "Oddsmokee",
+      "album": null,
+      "pool": "beatmap",
+      "manifestSizeBytes": 2001770,
+      "manifestSizeMatchesFile": true,
+      "audio": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Oddsmokee - In The End (LinkinPark Remix).mp3",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Oddsmokee - In The End (LinkinPark Remix).mp3",
+        "contentType": "audio/mpeg",
+        "sizeBytes": 2001770,
+        "sha256": "ff7a5bfc7a430f2972baee4d1570909fd1014d26151111a4556d936d89f78563",
+        "access": "private"
+      },
+      "artwork": {
+        "bucket": "soundbeats-ethglobal-media-20261106",
+        "key": "soundbeats_songs_pack/beatmap_browser/Oddsmokee - In The End (LinkinPark Remix).jpg",
+        "s3Uri": "s3://soundbeats-ethglobal-media-20261106/soundbeats_songs_pack/beatmap_browser/Oddsmokee - In The End (LinkinPark Remix).jpg",
+        "contentType": "image/jpeg",
+        "sizeBytes": 53401,
+        "sha256": "7bc0feaee34f04fd3818debbad34e99a0fdf6aeae8ad783bb0fb4a9b1453ed71",
+        "access": "private"
+      },
+      "artworkStatus": "original-supplied",
+      "arc": {
+        "chainId": 5042002,
+        "contract": "0x71a39b29e81497af2d8c3ab315ce3d778e999471",
+        "songId": "81",
+        "releaseId": "81",
+        "idProvenance": "local-seeding-checkpoint"
+      },
+      "beatmap": null,
+      "beatmapStatus": "not-supplied",
+      "rightsStatus": "not-verified",
+      "arkivEntityKey": null
+    }
+  ]
+}
