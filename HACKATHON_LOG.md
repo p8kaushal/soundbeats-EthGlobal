@@ -18,6 +18,8 @@ Beatmap generation uses SoundBeats' existing proprietary engine through a privat
 - World verification + Arkiv publishing (PR #3) and the combined deployment (PR #5) merged into main. Next: run the combined app at the domain root (Node 22, World + Arkiv secrets) and verify World login, Arkiv publish and catalog.
 - End to end on iPhone: photo → Lyria music → engine beatmap → play page → `soundbeats://` deep link → level plays in the SoundBeats iOS game (hackathon build). AI-level scores are kept off the production leaderboard. Game code stays in the private game repo.
 
+- Arc payments for AI levels: publishing lists the level on the SoundBeats Releases contract for 1.5 USDC with 100% of each sale to the SoundBeats wallet; the play page takes MetaMask payment and only then gives out the game link (checked on-chain with `hasAccess`). Release ID is saved to Arkiv. World verification made optional. Tested on a local fork of Arc Testnet.
+
 ## Planned
 - Fast auto-generated beatmaps for picture-to-music (done).
 - Creator beatmap editor with more controls (later).
