@@ -28,7 +28,9 @@ export function Empty({ title, body }: { title: string; body?: string }) {
 }
 
 /** Cover art generated from the song id. No stock images, no fake covers. */
-export function SongArt({ id, title, size = 56 }: { id: number; title: string; size?: number }) {
+export function SongArt({ id, title, size = 56, cover }: { id: number; title: string; size?: number; cover?: string }) {
+  const img = cover ? safeImageUrl(cover) : null
+  if (img) return <img src={img} alt="" aria-hidden loading="lazy" className="shrink-0 rounded-2xl object-cover" style={{ width: size, height: size }} />
   const hue = (id * 67 + 200) % 360
   const initials = title
     .split(/\s+/)

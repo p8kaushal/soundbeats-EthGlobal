@@ -54,7 +54,7 @@ export function ArtistPage({ data }: { data: AppData }) {
             const meta = decodeSongMeta(song.metadataURI)
             return (
               <Card key={song.id} className="flex items-center gap-3">
-                <SongArt id={song.id} title={song.title} />
+                <SongArt id={song.id} title={song.title} cover={meta.cover} />
                 <div className="min-w-0 flex-1">
                   <p className="display truncate font-semibold">{song.title}</p>
                   <p className="truncate text-sm" style={{ color: 'var(--muted)' }}>{meta.genre ?? 'Song'} · song #{song.id}</p>

@@ -44,12 +44,12 @@ export function ReleaseCard({ release, data }: { release: Release; data: AppData
   return (
     <article className="glass rounded-3xl p-4 sm:p-5">
       <div className="flex gap-3">
-        <SongArt id={release.songId} title={title} size={64} />
+        <SongArt id={release.songId} title={title} size={64} cover={meta.cover} />
         <div className="min-w-0 flex-1">
           <h3 className="display truncate text-lg font-semibold">{title}</h3>
           <p className="truncate text-sm" style={{ color: 'var(--muted)' }}>
             {artistLabel(song, release.artist)}
-            {meta.genre ? ` · ${meta.genre}` : ''}
+            {meta.album ? ` · ${meta.album}` : meta.genre ? ` · ${meta.genre}` : ''}
             {meta.bpm ? ` · ${meta.bpm} BPM` : ''}
           </p>
           <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-2">
