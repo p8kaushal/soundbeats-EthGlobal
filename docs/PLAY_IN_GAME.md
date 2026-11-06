@@ -59,7 +59,7 @@ A standard v2 beatmap (same format as `examples/sample-beatmap-d5.json`), with:
 
 ## Game side (summary)
 
-The game registers the `soundbeats://` scheme, reads `pkg` from the link, downloads the package from an allow-listed HTTPS domain, validates it, and starts the level using the audio URL in `source.mubertS3url`. That work lives in the private game repo.
+The game registers the `soundbeats://` scheme, reads `pkg` from the link, downloads the package from an allow-listed HTTPS domain, validates it, and starts the level using the audio URL in `source.mubertS3url`. That work lives in the private game repo. Status: working on iPhone in the hackathon build; AI-level scores are not sent to the production leaderboard.
 
 ## Privacy note
 

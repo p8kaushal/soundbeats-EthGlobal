@@ -65,3 +65,6 @@ body{background:var(--sb-paper);color:var(--sb-ink);font-family:system-ui,-apple
 .agent-chart i{width:8px;height:8px;margin-left:-4px;margin-bottom:-4px;background:#da2576;border:1px solid #fff;box-shadow:0 1px 4px rgba(125,18,67,.3)}
 .agent-map>p{margin-bottom:0}
 @media(max-width:600px){.agent-chart{height:160px}.agent-chart i{width:6px;height:6px}}
+.agent-qr{display:block;width:180px;height:180px;margin:18px 0 4px;border:1px solid var(--sb-line);border-radius:12px;padding:8px;background:white}
+.agent-publish{display:grid;gap:12px;margin-top:24px;padding-top:20px;border-top:1px solid var(--sb-line)}
+.agent-publish h3,.agent-publish p{margin:0}.agent-publish label{display:grid;gap:6px;font-size:14px;font-weight:600}.agent-publish input{width:100%;padding:12px;border:1px solid #bdbdc2;border-radius:10px;font:inherit}.agent-publish button{justify-self:start;padding:12px 22px;border:0;border-radius:24px;background:var(--sb-pink);color:white;font-weight:700;cursor:pointer}.agent-publish button:disabled{opacity:.55;cursor:not-allowed}
