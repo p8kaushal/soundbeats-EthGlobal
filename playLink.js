@@ -6,7 +6,8 @@
 //          to the track audio and imageUrl to the user's photo) and starts the level.
 //
 //   PUBLIC_BASE_URL   public origin the phone can reach, e.g. https://ethglobal.soundbeats.io
-//                     (defaults to the request's host; localhost links only work on this machine)
+//                     including any sub-path, e.g. https://ethglobal.soundbeats.io/game
+//                     (defaults to the request's host + BASE_PATH; localhost links only work on this machine)
 //   GAME_URL_SCHEME   app URL scheme, default "soundbeats"
 //   TESTFLIGHT_URL    public TestFlight invite link shown when the game isn't installed
 import QRCode from 'qrcode';
@@ -16,7 +17,7 @@ export function publicBase(req) {
   if (configured) return configured.replace(/\/+$/, '');
   const proto = String(req.headers['x-forwarded-proto'] || 'http').split(',')[0].trim();
   const host = req.headers['x-forwarded-host'] || req.headers.host || 'localhost';
-  return `${proto}://${host}`;
+  return `${proto}://${host}${(process.env.BASE_PATH || '').replace(/\/+$/, '')}`;
 }
 
 export const isLocalBase = base => /^https?:\/\/(localhost|127\.|\[::1\])/i.test(base);

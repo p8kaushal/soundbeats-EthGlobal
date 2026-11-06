@@ -11,6 +11,8 @@ const root = path.dirname(fileURLToPath(import.meta.url));
 const data = path.join(root, 'data');
 await mkdir(data, { recursive: true });
 const port = Number(process.env.PORT || 3000);
+// Optional sub-path when served behind nginx, e.g. BASE_PATH=/game -> https://ethglobal.soundbeats.io/game/
+const basePath = (process.env.BASE_PATH || '').replace(/\/+$/, '');
 const maxBytes = 5 * 1024 * 1024;
 const records = new Map();
 for (const file of await readdir(data)) if (file.endsWith('.json')) {
@@ -39,6 +41,10 @@ async function run(record, image, mimeType, prompt, demo) {
 const server = http.createServer(async (req, res) => {
   try {
     const url = new URL(req.url, 'http://localhost');
+    if (basePath) {
+      if (url.pathname === basePath) { res.writeHead(301, { Location: basePath + '/' + url.search }); return res.end(); }
+      if (url.pathname.startsWith(basePath + '/')) url.pathname = url.pathname.slice(basePath.length);
+    }
     if (req.method === 'POST' && url.pathname === '/api/tracks') {
       let input; try { input = await body(req); } catch (e) { return json(res, 400, { error: e instanceof SyntaxError ? 'Invalid JSON.' : e.message }); }
       if (typeof input.imageBase64 !== 'string' || !/^[A-Za-z0-9+/]+={0,2}$/.test(input.imageBase64)) return json(res, 400, { error: 'Provide a base64-encoded JPEG, PNG, or WebP image.' });

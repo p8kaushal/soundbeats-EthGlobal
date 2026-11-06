@@ -28,10 +28,10 @@ A beatmap must exist first: `POST /api/tracks/{id}/beatmap?difficulty=N`.
 {
   "trackId": "2a374aa1-…",
   "difficulty": 5,
-  "playPageUrl": "https://ethglobal.soundbeats.io/play/2a374aa1-…?difficulty=5",
-  "packageUrl": "https://ethglobal.soundbeats.io/api/play/2a374aa1-…/5.json",
-  "deepLink": "soundbeats://play?pkg=https%3A%2F%2Fethglobal.soundbeats.io%2Fapi%2Fplay%2F2a374aa1-…%2F5.json",
-  "qrSvgUrl": "https://ethglobal.soundbeats.io/api/tracks/2a374aa1-…/play-qr.svg?difficulty=5",
+  "playPageUrl": "https://ethglobal.soundbeats.io/game/play/2a374aa1-…?difficulty=5",
+  "packageUrl": "https://ethglobal.soundbeats.io/game/api/play/2a374aa1-…/5.json",
+  "deepLink": "soundbeats://play?pkg=https%3A%2F%2Fethglobal.soundbeats.io%2Fgame%2Fapi%2Fplay%2F2a374aa1-…%2F5.json",
+  "qrSvgUrl": "https://ethglobal.soundbeats.io/game/api/tracks/2a374aa1-…/play-qr.svg?difficulty=5",
   "testflightUrl": "https://testflight.apple.com/join/…",
   "reachableFromPhone": true
 }
@@ -52,7 +52,8 @@ A standard v2 beatmap (same format as `examples/sample-beatmap-d5.json`), with:
 
 | Variable | Purpose |
 |---|---|
-| `PUBLIC_BASE_URL` | Public HTTPS origin phones can reach, e.g. `https://ethglobal.soundbeats.io`. Defaults to the request host; `localhost` links only work on the same machine, and the page shows a warning. iOS needs HTTPS. |
+| `PUBLIC_BASE_URL` | Public HTTPS origin phones can reach, e.g. `https://ethglobal.soundbeats.io/game`. Defaults to the request host; `localhost` links only work on the same machine, and the page shows a warning. iOS needs HTTPS. |
+| `BASE_PATH` | Sub-path when served behind nginx, e.g. `/game`. See `deploy/nginx-game.conf` and `deploy/soundbeats-ethglobal-app.service`. |
 | `GAME_URL_SCHEME` | App URL scheme (default `soundbeats`). |
 | `TESTFLIGHT_URL` | Public TestFlight invite link shown when the game isn't installed. |
 

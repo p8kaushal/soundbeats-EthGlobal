@@ -1,0 +1,20 @@
+# systemd unit for the hackathon app (Ubuntu). Served by nginx at https://<domain>/game/
+# Install: sudo cp deploy/soundbeats-ethglobal-app.service /etc/systemd/system/
+#          sudo systemctl daemon-reload && sudo systemctl enable --now soundbeats-ethglobal-app
+[Unit]
+Description=SoundBeats ETHGlobal app (photo -> music -> beatmap -> play)
+After=network.target soundbeats-beatmap-engine.service
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/soundbeats-EthGlobal
+EnvironmentFile=/home/ubuntu/soundbeats-EthGlobal/.env
+ExecStart=/usr/bin/node server.js
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
