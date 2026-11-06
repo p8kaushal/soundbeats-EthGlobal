@@ -126,12 +126,23 @@ const PHASE_COPY: Record<string, string> = {
   'allow-confirming': 'Confirming your USDC allowance…',
   signing: 'Confirm the payment in your wallet…',
   confirming: 'Waiting for onchain confirmation…',
+  checking: 'Checking onchain status. Do not submit again…',
 }
 
 /** Real transaction state only: every line maps to a wallet prompt or an onchain receipt. */
 export function TxStatus({ state, onReset }: { state: TxState; onReset?: () => void }) {
   if (state.phase === 'idle') return null
   const explorer = state.hash ? buildTxExplorerUrl(CHAIN_ID, state.hash) : null
+
+  if (state.phase === 'uncertain') {
+    return (
+      <div role="status" className="mt-3 rounded-2xl px-3 py-2.5 text-sm" style={{ background: 'var(--surface-muted)', color: 'var(--ink-2)' }}>
+        <p>{state.error}</p>
+        {explorer && <a href={explorer} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] items-center underline">Check explorer</a>}
+        {onReset && <button type="button" onClick={onReset} className="min-h-[44px] px-2 underline">I've checked wallet activity; close notice</button>}
+      </div>
+    )
+  }
 
   if (state.phase === 'error') {
     return (

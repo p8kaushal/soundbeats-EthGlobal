@@ -3,7 +3,7 @@
  * Built with Arc Studio — https://studio.arc.io
  */
 
-import { http, createConfig } from 'wagmi'
+import { http, fallback, createConfig } from 'wagmi'
 import { mainnet } from 'wagmi/chains'
 import { arcTestnet } from 'viem/chains'
 import { injected } from 'wagmi/connectors'
@@ -20,7 +20,11 @@ export const config = createConfig({
   // Injected covers MetaMask (extension and the MetaMask mobile in-app browser) via EIP-6963.
   connectors: [injected()],
   transports: {
-    [arcTestnet.id]: http(ARC_RPC, { batch: true }),
+    // Read-only clients can fail over; wallet submissions still use MetaMask.
+    [arcTestnet.id]: fallback([
+      http(ARC_RPC, { batch: { batchSize: 20, wait: 50 }, retryCount: 1 }),
+      http('https://rpc.blockdaemon.testnet.arc.io', { batch: { batchSize: 20, wait: 50 }, retryCount: 1 }),
+    ], { retryCount: 1 }),
     [mainnet.id]: http(), // ENS resolution uses mainnet
   },
 })
