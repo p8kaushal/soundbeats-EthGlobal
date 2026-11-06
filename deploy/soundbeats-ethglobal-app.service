@@ -10,6 +10,9 @@ Type=simple
 User=ubuntu
 WorkingDirectory=/home/ubuntu/soundbeats-EthGlobal
 EnvironmentFile=/home/ubuntu/soundbeats-EthGlobal/.env
+# Secrets live outside the repo; '-' means optional.
+EnvironmentFile=-/home/ubuntu/secrets/arkiv.env
+EnvironmentFile=-/home/ubuntu/secrets/arc.env
 ExecStart=/usr/bin/node server.js
 Restart=on-failure
 RestartSec=3

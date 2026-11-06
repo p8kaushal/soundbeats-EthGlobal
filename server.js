@@ -6,6 +6,8 @@ import { generateBeatmap, beatmapEngineConfigured } from './beatmapClient.js';
 import { arkivConfigured, listTracks, publishTrack } from './arkivClient.js';
 import { beginWorldAuth, consumeWorldVerification, finishWorldAuth, sessionFor, worldConfigured, worldStatus } from './worldAuth.js';
 import { publicBase, pickDifficulty, playLinks, playPackage, playPage, qrSvg } from './playLink.js';
+import { arcConfigured, arcPublicInfo, arcPriceUnits, hasArcAccess, publishOnArc, signAccess, verifyAccess } from './arcClient.js';
+import { isAddress, getAddress, formatUnits } from 'viem';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
@@ -23,6 +25,8 @@ for (const file of await readdir(data)) if (file.endsWith('.json')) {
 const save = async record => { records.set(record.id, record); await writeFile(path.join(data, `${record.id}.json`), JSON.stringify(record)); };
 const json = (res, status, value) => { res.writeHead(status, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' }); res.end(JSON.stringify(value)); };
 const publicRecord = record => { const { sessionId, ...safe } = record; return safe; };
+const arcRelease = (record, difficulty) => (record.arc?.[difficulty]?.complete ? record.arc[difficulty] : null);
+const publishing = new Map();
 const clientIp = req => String(req.headers['x-forwarded-for'] || req.socket.remoteAddress || '').split(',')[0].trim();
 function rateLimited(req, bucket, limit, windowMs) {
   const key = `${bucket}:${clientIp(req)}`, now = Date.now();
@@ -67,7 +71,7 @@ const server = http.createServer(async (req, res) => {
       try { await finishWorldAuth(req, res, url); res.writeHead(302, { Location: `${basePath || ''}/?world=verified`, 'Cache-Control': 'no-store' }); return res.end(); }
       catch (error) { console.error(error); res.writeHead(302, { Location: `${basePath || ''}/?world=failed`, 'Cache-Control': 'no-store' }); return res.end(); }
     }
-    if (req.method === 'GET' && url.pathname === '/api/config') return json(res, 200, { worldConfigured: worldConfigured(), arkivConfigured: arkivConfigured(), beatmapConfigured: beatmapEngineConfigured() });
+    if (req.method === 'GET' && url.pathname === '/api/config') return json(res, 200, { worldConfigured: worldConfigured(), worldRequired: worldConfigured(), arkivConfigured: arkivConfigured(), arcConfigured: arcConfigured(), arcPriceUsdc: formatUnits(arcPriceUnits(), 6), beatmapConfigured: beatmapEngineConfigured() });
     if (req.method === 'GET' && url.pathname === '/api/catalog') {
       try { return json(res, 200, { tracks: await listTracks() }); }
       catch (error) { console.error(error); return json(res, 503, { error: 'The published track catalog is temporarily unavailable.' }); }
@@ -83,7 +87,7 @@ const server = http.createServer(async (req, res) => {
       if (input.demo !== undefined && typeof input.demo !== 'boolean') return json(res, 400, { error: 'Demo must be a boolean.' });
       const demo = input.demo === true;
       if (!demo && !process.env.GEMINI_API_KEY) return json(res, 503, { error: 'Live generation needs GEMINI_API_KEY. Use the demo track or configure the key.' });
-      if (!demo && !consumeWorldVerification(ensureSession())) return json(res, 401, { error: 'Verify with World before starting live music generation.', verificationRequired: true });
+      if (!demo && worldConfigured() && !consumeWorldVerification(ensureSession())) return json(res, 401, { error: 'Verify with World before starting live music generation.', verificationRequired: true });
       const record = { id: randomUUID(), sessionId: ensureSession().id, status: 'processing', source: demo ? 'demo' : 'lyria', createdAt: new Date().toISOString(), audioUrl: null, format: null, mimeType: null, durationSeconds: null };
       const imageFormat = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp' }[mimeType];
       await writeFile(path.join(data, `${record.id}.image.${imageFormat}`), image);
@@ -105,14 +109,34 @@ const server = http.createServer(async (req, res) => {
       const selected = candidates.find(([difficulty]) => String(difficulty) === String(input.difficulty)) || candidates[0];
       if (!selected) return json(res, 409, { error: 'Generate a real engine beatmap before publishing.' });
       const [difficulty, beatmap] = selected, base = originFor(req);
+      if (!arcConfigured() && !arkivConfigured()) return json(res, 503, { error: 'Publishing is not configured on this server.' });
+      if (publishing.has(record.id)) return json(res, 409, { error: 'This track is already being published. Wait a moment.' });
+      publishing.set(record.id, true);
       try {
         const publishedAt = new Date().toISOString();
-        const metadata = { trackId: record.id, title, creator, source: record.source, format: record.format, mimeType: record.mimeType, durationSeconds: record.durationSeconds, audioUrl: `${base}${record.audioUrl}`, beatmapUrl: `${base}${beatmap.url}`, beatmapSource: beatmap.source, difficulty: Number(difficulty), bpm: beatmap.bpm, notes: beatmap.notes, createdAt: record.createdAt, publishedAt };
-        const arkiv = await publishTrack(metadata);
+        const playPageUrl = `${base}/play/${record.id}?difficulty=${difficulty}`;
+        let arc = null;
+        if (arcConfigured()) {
+          try {
+            arc = await publishOnArc({
+              title, metadataURI: playPageUrl, beatmapId: `ai-${record.id}-d${difficulty}`, difficulty: Number(difficulty),
+              progress: record.arc?.[difficulty] || {},
+              onProgress: async state => { record.arc = { ...(record.arc || {}), [difficulty]: state }; await save(record); },
+            });
+          } catch (error) { console.error(error); return json(res, 502, { error: `Arc could not list this level: ${error.shortMessage || error.message}`.slice(0, 300) }); }
+        }
+        record.title = title; record.creator = creator;
+        const metadata = { trackId: record.id, title, creator, source: record.source, format: record.format, mimeType: record.mimeType, durationSeconds: record.durationSeconds, audioUrl: `${base}${record.audioUrl}`, beatmapUrl: `${base}${beatmap.url}`, playPageUrl, beatmapSource: beatmap.source, difficulty: Number(difficulty), bpm: beatmap.bpm, notes: beatmap.notes, createdAt: record.createdAt, publishedAt,
+          ...(arc ? { arc: { chainId: arc.chainId, contract: arc.contract, releaseId: arc.releaseId, songId: arc.songId, priceUsdc: formatUnits(BigInt(arc.price), 6), payoutWallet: arc.payoutWallet } } : {}) };
+        let arkiv = {};
+        if (arkivConfigured()) {
+          try { arkiv = await publishTrack(metadata); }
+          catch (error) { console.error(error); await save(record); return json(res, 502, { error: arc ? 'Listed on Arc, but Arkiv could not save the record. Click Publish again to retry Arkiv.' : 'Arkiv could not publish this track. Please try again.' }); }
+        }
         record.published = { ...metadata, ...arkiv };
         await save(record);
         return json(res, 201, record.published);
-      } catch (error) { console.error(error); return json(res, 502, { error: 'Arkiv could not publish this track. Please try again.' }); }
+      } finally { publishing.delete(record.id); }
     }
     const beatmapMatch = url.pathname.match(/^\/api\/tracks\/([0-9a-f-]{36})\/beatmap$/);
     if (beatmapMatch && (req.method === 'POST' || req.method === 'GET')) {
@@ -147,6 +171,20 @@ const server = http.createServer(async (req, res) => {
     const linkMatch = url.pathname.match(/^\/api\/tracks\/([0-9a-f-]{36})\/(play-link|play-qr\.svg)$/);
     const pageMatch = url.pathname.match(/^\/play\/([0-9a-f-]{36})$/);
     const pkgMatch = url.pathname.match(/^\/api\/play\/([0-9a-f-]{36})\/(\d{1,2})\.json$/);
+    const unlockMatch = url.pathname.match(/^\/api\/play\/([0-9a-f-]{36})\/(10|[1-9])\/unlock$/);
+    if (req.method === 'POST' && unlockMatch) {
+      if (rateLimited(req, 'unlock', 30, 60 * 1000)) return json(res, 429, { error: 'Too many checks. Wait a minute.' });
+      const record = records.get(unlockMatch[1]), difficulty = Number(unlockMatch[2]);
+      const release = record && arcRelease(record, difficulty);
+      if (!release) return json(res, 404, { error: 'This level is not on sale.' });
+      let input; try { input = await body(req); } catch { return json(res, 400, { error: 'Invalid JSON.' }); }
+      if (typeof input.wallet !== 'string' || !isAddress(input.wallet)) return json(res, 400, { error: 'Provide a wallet address.' });
+      const wallet = getAddress(input.wallet);
+      let paid; try { paid = await hasArcAccess(release.releaseId, wallet); } catch (error) { console.error(error); return json(res, 503, { error: 'Could not reach Arc to check payment. Try again.' }); }
+      if (!paid) return json(res, 402, { paid: false, error: 'No payment found for this wallet yet.' });
+      const links = playLinks(publicBase(req), record, difficulty, { wallet, sig: signAccess(record.id, difficulty, wallet) });
+      return json(res, 200, { paid: true, wallet, ...links, qrSvg: await qrSvg(links.playPageUrl) });
+    }
     if (req.method === 'GET' && (linkMatch || pageMatch || pkgMatch)) {
       const id = (linkMatch || pageMatch || pkgMatch)[1];
       const record = records.get(id);
@@ -156,13 +194,23 @@ const server = http.createServer(async (req, res) => {
       if (requested != null && !/^(10|[1-9])$/.test(requested)) return json(res, 400, { error: 'Difficulty must be a whole number from 1 to 10.' });
       const difficulty = pickDifficulty(record, requested == null ? null : Number(requested));
       if (difficulty == null) return json(res, 404, { error: 'No beatmap for this track yet. POST /api/tracks/{id}/beatmap?difficulty=N first.' });
-      const base = publicBase(req), links = playLinks(base, record, difficulty);
-      if (linkMatch?.[2] === 'play-link') return json(res, 200, links);
+      const base = publicBase(req), release = arcRelease(record, difficulty);
+      const qWallet = url.searchParams.get('w'), qSig = url.searchParams.get('s');
+      const access = release && verifyAccess(record.id, difficulty, qWallet, qSig) ? { wallet: getAddress(qWallet), sig: qSig } : null;
+      const links = playLinks(base, record, difficulty, access);
+      if (linkMatch?.[2] === 'play-link') {
+        const extra = release ? { forSale: true, arc: arcPublicInfo(release) } : { forSale: false };
+        if (release && record.sessionId && record.sessionId === ensureSession().id) {
+          const owner = release.payoutWallet; extra.ownerPlayPageUrl = playLinks(base, record, difficulty, { wallet: owner, sig: signAccess(record.id, difficulty, owner) }).playPageUrl;
+        }
+        return json(res, 200, { ...links, ...extra });
+      }
+      if (pkgMatch && release && !access) return json(res, 402, { error: 'Payment required. Unlock this level on the play page.', playPageUrl: links.playPageUrl });
       if (linkMatch) { res.writeHead(200, { 'Content-Type': 'image/svg+xml', 'Cache-Control': 'no-store' }); return res.end(await qrSvg(links.playPageUrl)); }
       const beatmap = JSON.parse(await readFile(path.join(data, `${record.id}.beatmap-d${difficulty}.json`), 'utf8'));
       const pkg = playPackage(base, record, beatmap);
       if (pkgMatch) { res.writeHead(200, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'public, max-age=300' }); return res.end(JSON.stringify(pkg)); }
-      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' }); return res.end(await playPage(links, pkg));
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' }); return res.end(await playPage(links, pkg, release && !access ? { ...arcPublicInfo(release), unlockUrl: `${base}/api/play/${record.id}/${difficulty}/unlock` } : null));
     }
     const match = url.pathname.match(/^\/api\/tracks\/([0-9a-f-]{36})(\/audio)?$/);
     if ((req.method === 'GET' || req.method === 'HEAD') && match) {
