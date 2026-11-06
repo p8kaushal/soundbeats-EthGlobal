@@ -4,7 +4,7 @@ import { spawn } from 'node:child_process';
 import { setTimeout as sleep } from 'node:timers/promises';
 
 // "Play in SoundBeats" links, using mock beatmaps (no private engine needed).
-const port = 31989, base = `http://127.0.0.1:${port}`, publicUrl = 'https://play.example.test';
+const port = 31990, base = `http://127.0.0.1:${port}`, publicUrl = 'https://play.example.test';
 const server = spawn(process.execPath, ['server.js'], { env: { ...process.env, PORT: String(port), GEMINI_API_KEY: '', BEATMAP_ENGINE_URL: '', BEATMAP_ENGINE_MOCK: '1', PUBLIC_BASE_URL: publicUrl, TESTFLIGHT_URL: 'https://testflight.apple.com/join/TEST1234' }, stdio: 'ignore' });
 after(() => server.kill());
 async function ready() { for (let i = 0; i < 50; i++) { try { await fetch(base); return; } catch { await sleep(100); } } throw new Error('Server did not start'); }
