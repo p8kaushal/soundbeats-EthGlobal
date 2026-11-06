@@ -99,7 +99,7 @@ const server = http.createServer(async (req, res) => {
     if (req.method === 'GET' && url.pathname === '/api/config') return json(res, 200, { worldConfigured: worldConfigured(), worldRequired: worldConfigured(), arkivConfigured: arkivConfigured(), arcConfigured: arcConfigured(), arcPriceUsdc: formatUnits(arcPriceUnits(), 6), beatmapConfigured: beatmapEngineConfigured() });
     if (req.method === 'GET' && url.pathname === '/api/catalog') {
       try { return json(res, 200, { tracks: await listTracks() }); }
-      catch (error) { console.error(error); return json(res, 503, { error: 'The published track catalog is temporarily unavailable.' }); }
+      catch (error) { console.error('Arkiv catalog read failed:', error?.name || 'Error'); return json(res, 503, { error: 'The published track catalog is temporarily unavailable.' }); }
     }
     if (req.method === 'POST' && url.pathname === '/api/tracks') {
       if (rateLimited(req, 'tracks', 10, 60 * 60 * 1000)) return json(res, 429, { error: 'Generation limit reached for this connection. Try again later.' });
