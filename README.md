@@ -25,6 +25,8 @@ Start the API in one terminal with `npm run server`. In another terminal run `np
 
 Each track can be turned into a playable beatmap (difficulty 1–10) through SoundBeats' private beatmap engine. The engine is proprietary and not part of this repository; the app calls it over an authenticated API. See [docs/BEATMAP_INTEGRATION.md](docs/BEATMAP_INTEGRATION.md) for setup, the API, the beatmap format and mock mode. Confirm the game's supported audio formats and duration with the game teammate. The API returns relative URLs, so resolve them against the server origin. Localhost URLs are reachable only on the machine running the server.
 
+**Play in SoundBeats:** once a beatmap exists, the app shows a play link and QR code that open the SoundBeats iOS app (TestFlight) straight into the level. The AI agent can get the link from `GET /api/tracks/{id}/play-link`. See [docs/PLAY_IN_GAME.md](docs/PLAY_IN_GAME.md).
+
 Create a request (base64 is the raw file bytes, without a data URL prefix):
 
 ```sh

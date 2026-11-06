@@ -26,7 +26,7 @@ function BeatmapPanel({ track }) {
     try {
       const response = await fetch(`/api/tracks/${track.id}/beatmap?difficulty=${difficulty}`, { method: 'POST' });
       const body = await response.json(); if (!response.ok) throw new Error(body.error);
-      setResult(body); setMessage(body.source === 'mock' ? 'Mock beatmap ready (placeholder notes, not from the music).' : 'Beatmap ready.');
+      setResult({ ...body, difficulty }); setMessage(body.source === 'mock' ? 'Mock beatmap ready (placeholder notes, not from the music).' : 'Beatmap ready.');
     } catch (err) { setFailed(true); setMessage(err.message || 'Beatmap generation failed.'); }
     finally { setBusy(false); }
   }
@@ -43,9 +43,23 @@ function BeatmapPanel({ track }) {
       <div className="chart" aria-label="Beatmap preview">{beats.map((b, i) => <i key={i} className={`n t${b.type}${b.hold > 0 ? ' h' : ''}`} style={{ left: `calc(8px + ${b.t / end} * (100% - 16px))`, bottom: `calc(8px + ${b.x} * (100% - 16px))` }}/>)}</div>
       <div className="stats"><span><b>{beats.length}</b>notes</span><span><b>{result.info?.bpm ? Math.round(result.info.bpm) : '–'}</b>bpm</span><span><b>{counts[0] || 0}/{counts[1] || 0}/{counts[2] || 0}</b>{typeName.join(' / ').toLowerCase()}</span><span><b>{holds}</b>holds</span></div>
       <a className="download" href={result.beatmapUrl} download={`soundbeats-${track.id}-d${difficulty}.json`}>Download beatmap JSON <span>↓</span></a>
+      <PlayInGame track={track} difficulty={result.difficulty}/>
     </div>}
     {message && <p className={`beatmap-status${failed ? ' error' : ''}`} role="status" aria-live="polite">{message}</p>}
   </div>;
+}
+function PlayInGame({ track, difficulty }) {
+  const [link, setLink] = useState(null), [error, setError] = useState(''), [copied, setCopied] = useState(false);
+  useEffect(() => { let live = true; setLink(null); setError('');
+    fetch(`/api/tracks/${track.id}/play-link?difficulty=${difficulty}`).then(async r => { const b = await r.json(); if (!r.ok) throw new Error(b.error); if (live) setLink(b); }).catch(e => live && setError(e.message || 'Could not create the play link.'));
+    return () => { live = false; }; }, [track.id, difficulty]);
+  if (error) return <p className="beatmap-status error">{error}</p>;
+  if (!link) return null;
+  return <div className="play-game"><div><span className="step">04 / PLAY IN GAME</span><h3>Play in SoundBeats</h3><p>Scan with your iPhone, or open the link on your phone. It opens the SoundBeats TestFlight app straight into this level.</p>
+    <a className="play-button" href={link.playPageUrl} target="_blank" rel="noreferrer">Open play link <span>▶</span></a>
+    <button type="button" className="copy" onClick={async () => { try { await navigator.clipboard.writeText(link.playPageUrl); setCopied(true); setTimeout(() => setCopied(false), 1500); } catch { /* clipboard unavailable */ } }}>{copied ? 'Copied' : 'Copy link'}</button>
+    {!link.reachableFromPhone && <p className="play-warn">Local address: phones can't open this until the app runs on the public server (PUBLIC_BASE_URL).</p>}</div>
+    <img className="play-qr" src={link.qrSvgUrl.replace(/^https?:\/\/[^/]+/, '')} alt="QR code for the play link"/></div>;
 }
 function App() {
   const [file, setFile] = useState(null), [preview, setPreview] = useState('');

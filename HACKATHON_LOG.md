@@ -12,7 +12,9 @@ Beatmap generation uses SoundBeats' existing proprietary engine through a privat
 - Hackathon server provisioned (isolated from SoundBeats production/staging).
 - Beatmap integration (PR #2): `beatmapClient.js`, `POST/GET /api/tracks/{id}/beatmap?difficulty=1-10`, "03 / Play" panel with difficulty slider, chart preview, stats and download; mock mode for local testing; docs and sample beatmap.
 - Private beatmap engine deployed on the hackathon server as a localhost-only service (token-protected, not publicly reachable); health check passing.
-- Next: connect the app to the live engine for real beatmaps end to end.
+- Beatmap feature merged to main (PR #2); teammate connected to the live engine through an SSH tunnel.
+- "Play in SoundBeats": play link + QR landing page, public play package (beatmap + audio URL + cover photo), `play-link` API for the AI agent, tests. Deep link `soundbeats://play?pkg=…` opens the iOS TestFlight build.
+- Next: public HTTPS address for the server, game-side deep link handling (TestFlight build), real Lyria track end to end.
 
 ## Planned
 - Fast auto-generated beatmaps for picture-to-music (in progress).

@@ -3,6 +3,7 @@ import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import { randomUUID } from 'node:crypto';
 import { generateMusic } from './provider.js';
 import { generateBeatmap, beatmapEngineConfigured } from './beatmapClient.js';
+import { publicBase, pickDifficulty, playLinks, playPackage, playPage, qrSvg } from './playLink.js';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
@@ -49,6 +50,9 @@ const server = http.createServer(async (req, res) => {
       const demo = input.demo === true;
       if (!demo && !process.env.GEMINI_API_KEY) return json(res, 503, { error: 'Live generation needs GEMINI_API_KEY. Use the demo track or configure the key.' });
       const record = { id: randomUUID(), status: 'processing', source: demo ? 'demo' : 'lyria', createdAt: new Date().toISOString(), audioUrl: null, format: null, mimeType: null, durationSeconds: null };
+      const imageFormat = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp' }[mimeType];
+      await writeFile(path.join(data, `${record.id}.image.${imageFormat}`), image);
+      Object.assign(record, { imageFormat, imageMimeType: mimeType });
       await save(record); run(record, image, mimeType, input.prompt || '', demo).catch(console.error); return json(res, 202, record);
     }
     const beatmapMatch = url.pathname.match(/^\/api\/tracks\/([0-9a-f-]{36})\/beatmap$/);
@@ -72,6 +76,34 @@ const server = http.createServer(async (req, res) => {
         await save(record);
         return json(res, 200, { ...result, beatmapUrl: record.beatmaps[difficulty].url });
       } catch (e) { console.error(e); return json(res, 502, { error: e.message || 'Beatmap generation failed.' }); }
+    }
+    // ---- Play in SoundBeats (deep link into the game) ----
+    const imageMatch = url.pathname.match(/^\/api\/tracks\/([0-9a-f-]{36})\/image$/);
+    if (imageMatch && (req.method === 'GET' || req.method === 'HEAD')) {
+      const record = records.get(imageMatch[1]);
+      if (!record || !record.imageFormat) return json(res, 404, { error: 'Image not found.' });
+      const bytes = await readFile(path.join(data, `${record.id}.image.${record.imageFormat}`));
+      res.writeHead(200, { 'Content-Type': record.imageMimeType, 'Content-Length': bytes.length, 'Cache-Control': 'public, max-age=86400' });
+      return req.method === 'HEAD' ? res.end() : res.end(bytes);
+    }
+    const linkMatch = url.pathname.match(/^\/api\/tracks\/([0-9a-f-]{36})\/(play-link|play-qr\.svg)$/);
+    const pageMatch = url.pathname.match(/^\/play\/([0-9a-f-]{36})$/);
+    const pkgMatch = url.pathname.match(/^\/api\/play\/([0-9a-f-]{36})\/(\d{1,2})\.json$/);
+    if (req.method === 'GET' && (linkMatch || pageMatch || pkgMatch)) {
+      const id = (linkMatch || pageMatch || pkgMatch)[1];
+      const record = records.get(id);
+      if (!record) return json(res, 404, { error: 'Track not found.' });
+      const requested = pkgMatch ? pkgMatch[2] : url.searchParams.get('difficulty');
+      if (requested != null && !/^(10|[1-9])$/.test(requested)) return json(res, 400, { error: 'Difficulty must be a whole number from 1 to 10.' });
+      const difficulty = pickDifficulty(record, requested == null ? null : Number(requested));
+      if (difficulty == null) return json(res, 404, { error: 'No beatmap for this track yet. POST /api/tracks/{id}/beatmap?difficulty=N first.' });
+      const base = publicBase(req), links = playLinks(base, record, difficulty);
+      if (linkMatch?.[2] === 'play-link') return json(res, 200, links);
+      if (linkMatch) { res.writeHead(200, { 'Content-Type': 'image/svg+xml', 'Cache-Control': 'no-store' }); return res.end(await qrSvg(links.playPageUrl)); }
+      const beatmap = JSON.parse(await readFile(path.join(data, `${record.id}.beatmap-d${difficulty}.json`), 'utf8'));
+      const pkg = playPackage(base, record, beatmap);
+      if (pkgMatch) { res.writeHead(200, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'public, max-age=300' }); return res.end(JSON.stringify(pkg)); }
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' }); return res.end(await playPage(links, pkg));
     }
     const match = url.pathname.match(/^\/api\/tracks\/([0-9a-f-]{36})(\/audio)?$/);
     if ((req.method === 'GET' || req.method === 'HEAD') && match) {
