@@ -4,4 +4,4 @@ traces.jsonl
 console.jsonl
 contracts/out
 contracts/cache
-lib
+/lib
