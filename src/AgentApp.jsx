@@ -23,10 +23,12 @@ function PlayPublish({ track, beatmap, difficulty }) {
       const response = await fetch(`api/tracks/${track.id}/publish`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ title, creator, difficulty }) });
       const data = await response.json(); if (!response.ok) throw new Error(data.error);
       setPublished(data);
+      const updated = await fetch(`api/tracks/${track.id}/play-link?difficulty=${difficulty}`);
+      if (updated.ok) setLink(await updated.json());
     } catch (err) { setError(err.message || 'Publishing failed.'); } finally { setPublishing(false); }
   }
   return <section className="agent-map agent-play"><h3>Play in SoundBeats</h3>
-    {link && <><p>Open the play page on your iPhone or scan the QR code.</p><img className="agent-qr" src={relative(`api/tracks/${track.id}/play-qr.svg?difficulty=${difficulty}`)} alt="QR code for the SoundBeats play page"/><p><a href={link.playPageUrl} target="_blank" rel="noreferrer">Open play page ↗</a></p>{!link.reachableFromPhone && <p>This local address cannot be opened from your phone. Use the hosted HTTPS app to test the QR code.</p>}</>}
+    {link && <><p>Open the play page on your iPhone or scan the QR code.</p><img className="agent-qr" src={relative(`api/tracks/${track.id}/play-qr.svg?difficulty=${difficulty}`)} alt="QR code for the SoundBeats play page"/><p><a href={link.playPageUrl} target="_blank" rel="noreferrer">Open play page ↗</a>{link.ownerPlayPageUrl && <a href={link.ownerPlayPageUrl} target="_blank" rel="noreferrer">Play as creator ↗</a>}</p>{!link.reachableFromPhone && <p>This local address cannot be opened from your phone. Use the hosted HTTPS app to test the QR code.</p>}</>}
     {track.source === 'lyria' && beatmap.source === 'engine' && <form className="agent-publish" onSubmit={publish}><h3>Publish your level</h3><p>List the level on the configured Arc testnet deployment and save its metadata to Arkiv when configured. The shared play page handles payment and access.</p><label>Level title<input required maxLength={80} value={title} onChange={event => setTitle(event.target.value)}/></label><label>Creator name<input required maxLength={60} value={creator} onChange={event => setCreator(event.target.value)}/></label><button type="submit" disabled={publishing || Boolean(published)}>{published ? 'Published' : publishing ? 'Publishing…' : 'Publish level'}</button>{published && <p role="status">Published{published.arc ? ` on Arc · ${published.arc.priceUsdc} USDC` : ''}{published.entityKey ? ' · Arkiv record saved' : ''}. <a href={published.playPageUrl} target="_blank" rel="noreferrer">Open shared play page</a></p>}</form>}
     {error && <p role="alert">{error}</p>}
   </section>;
@@ -49,7 +51,7 @@ export default function AgentApp() {
   async function make() {
     if (!file || busy) return; setBusy(true); setTrack(null); setBeatmap(null); setBeatmapError(''); add('assistant', demo ? 'Preparing the demo sample…' : 'Creating your music. This may take a few minutes…');
     try {
-      const prompt = [...messages].reverse().find(message => message.role === 'user')?.text || '';
+      const prompt = text.trim() || [...messages].reverse().find(message => message.role === 'user')?.text || '';
       let response = await fetch('api/tracks', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ imageBase64: await readBase64(file), prompt: prompt.slice(0, 500), demo }) });
       let result = await response.json(); if (!response.ok) { if (result.verificationRequired) setWorldRequired(true); throw new Error(result.error); }
       for (let attempt = 0; result.status === 'processing' && attempt < 180; attempt++) { await wait(2000); response = await fetch(`api/tracks/${result.id}`); result = await response.json(); if (!response.ok) throw new Error(result.error); }
