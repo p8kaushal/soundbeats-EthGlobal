@@ -10,13 +10,28 @@ export interface SongMeta {
   cover?: string
   genre?: string
   bpm?: number
+  /** Artist upload id on the SoundBeats releases API (media lives in private S3). */
+  uploadId?: string
+  /** Streamable audio URL, derived from uploadId (not stored onchain, to stay under the 512-byte limit). */
+  audio?: string
 }
 
 const PREFIX = 'data:application/json,'
 
+/** Where uploaded media is served from (the releases API behind the site's own domain). */
+export const MEDIA_ORIGIN = 'https://arc.ethglobal.soundbeats.io'
+const UPLOAD_ID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/
+
+/** The contract rejects metadata URIs longer than this many bytes. */
+export const MAX_METADATA_BYTES = 512
+
 export function encodeSongMeta(meta: SongMeta): string {
-  return PREFIX + encodeURIComponent(JSON.stringify(meta))
+  const { audio: _derived, ...stored } = meta
+  void _derived
+  return PREFIX + encodeURIComponent(JSON.stringify(stored))
 }
+
+export const metadataBytes = (uri: string) => new TextEncoder().encode(uri).length
 
 export function decodeSongMeta(uri: string): SongMeta {
   if (!uri.startsWith(PREFIX)) return {}
@@ -30,6 +45,8 @@ export function decodeSongMeta(uri: string): SongMeta {
       album: typeof record.album === 'string' ? record.album : undefined,
       genre: typeof record.genre === 'string' ? record.genre : undefined,
       bpm: typeof record.bpm === 'number' ? record.bpm : undefined,
+      uploadId: typeof record.uploadId === 'string' ? record.uploadId : undefined,
+      audio: typeof record.uploadId === 'string' && UPLOAD_ID.test(record.uploadId) ? `${MEDIA_ORIGIN}/api/media/${record.uploadId}/audio` : undefined,
     }
   } catch {
     return {}
