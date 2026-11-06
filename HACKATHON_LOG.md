@@ -16,10 +16,10 @@ Beatmap generation uses SoundBeats' existing proprietary engine through a privat
 - Partner integration branch adds World Agent Pass before live Lyria generation and Arkiv publishing/catalog support. Local build and automated API checks pass; the live callback, first Arkiv write and public deployment remain to be verified on the server.
 - Play in SoundBeats (PR #4): play links, QR landing page, hosted play package (beatmap + MP3) for the iOS game via `soundbeats://` deep link. Live at `/game` with real Lyria + engine beatmaps verified end to end.
 - World verification + Arkiv publishing (PR #3) and the combined deployment (PR #5) merged into main. Next: run the combined app at the domain root (Node 22, World + Arkiv secrets) and verify World login, Arkiv publish and catalog.
-- Game side: Unity deep-link handler started (private game repo).
+- End to end on iPhone: photo → Lyria music → engine beatmap → play page → `soundbeats://` deep link → level plays in the SoundBeats iOS game (hackathon build). AI-level scores are kept off the production leaderboard. Game code stays in the private game repo.
 
 ## Planned
-- Fast auto-generated beatmaps for picture-to-music (in progress).
+- Fast auto-generated beatmaps for picture-to-music (done).
 - Creator beatmap editor with more controls (later).
 - AI agent + web3 layer (Parth).
 
