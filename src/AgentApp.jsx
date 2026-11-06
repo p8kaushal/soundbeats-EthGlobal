@@ -46,13 +46,25 @@ export default function AgentApp() {
   async function send(event) {
     event.preventDefault(); const message = text.trim(); if (!message || busy) return;
     setText(''); add('user', message); setBusy(true);
-    try { const response = await fetch('api/agent/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message }) }); const result = await response.json(); if (!response.ok) throw new Error(result.error); add('assistant', result.reply); } catch (error) { add('assistant', error.message || 'Chat is unavailable.'); } finally { setBusy(false); }
-  }
-  async function make() {
-    if (!file || busy) return; setBusy(true); setTrack(null); setBeatmap(null); setBeatmapError(''); add('assistant', demo ? 'Preparing the demo sample…' : 'Creating your music. This may take a few minutes…');
     try {
+      const response = await fetch('api/agent/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message, context: { imageAttached: Boolean(file), difficulty, demo, trackReady: Boolean(track), beatmapReady: Boolean(beatmap), published: Boolean(track?.published) } }) });
+      const result = await response.json(); if (!response.ok) throw new Error(result.error);
+      add('assistant', result.reply);
+      for (const action of result.actions || []) {
+        if (action.type === 'set_prompt') setText(String(action.value || ''));
+        if (action.type === 'set_difficulty') setDifficulty(Number(action.value));
+        if (action.type === 'clear_image') setFile(null);
+        if (action.type === 'create') { setDemo(Boolean(action.demo)); await make(Boolean(action.demo)); }
+      }
+    } catch (error) { add('assistant', error.message || 'Chat is unavailable.'); } finally { setBusy(false); }
+  }
+  async function make(demoOverride = null) {
+    if (!file || (busy && demoOverride === null)) return; setBusy(true); setTrack(null); setBeatmap(null); setBeatmapError('');
+    try {
+      const useDemo = demoOverride === null ? demo : demoOverride;
+      add('assistant', useDemo ? 'Preparing the demo sample…' : 'Creating your music. This may take a few minutes…');
       const prompt = text.trim() || [...messages].reverse().find(message => message.role === 'user')?.text || '';
-      let response = await fetch('api/tracks', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ imageBase64: await readBase64(file), prompt: prompt.slice(0, 500), demo }) });
+      let response = await fetch('api/tracks', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ imageBase64: await readBase64(file), prompt: prompt.slice(0, 500), demo: useDemo }) });
       let result = await response.json(); if (!response.ok) { if (result.verificationRequired) setWorldRequired(true); throw new Error(result.error); }
       for (let attempt = 0; result.status === 'processing' && attempt < 180; attempt++) { await wait(2000); response = await fetch(`api/tracks/${result.id}`); result = await response.json(); if (!response.ok) throw new Error(result.error); }
       if (result.status !== 'completed') throw new Error(result.error || 'Generation is still processing. Please try again later.');
