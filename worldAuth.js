@@ -26,6 +26,17 @@ export function sessionFor(req, res) {
   return sessions.get(id);
 }
 
+// A restart clears in-memory sessions. Restore only the creator's existing random
+// cookie for a recently created track; World verification is deliberately not restored.
+export function restoreTrackSession(req, record) {
+  const id = cookies(req).sb_session;
+  const createdAt = Date.parse(record.createdAt);
+  const now = Date.now();
+  if (!id || id !== record.sessionId || !Number.isFinite(createdAt) || createdAt > now || now - createdAt >= 24 * 60 * 60 * 1000) return false;
+  if (!sessions.has(id)) sessions.set(id, { id, createdAt });
+  return true;
+}
+
 async function discovery() {
   if (!discoveryPromise) discoveryPromise = fetch(`${issuer}/.well-known/openid-configuration`).then(async response => {
     if (!response.ok) throw new Error('World authentication discovery failed.');

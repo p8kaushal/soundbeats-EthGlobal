@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { generatePrivateKey } from 'viem/accounts';
 process.env.ARC_PUBLISHER_KEY = generatePrivateKey(); // random throwaway key for signing tests
-const { signAccess, verifyAccess, arcPublicInfo, arcPayoutWallet, arcPriceUnits } = await import('./arcClient.js');
+const { signAccess, verifyAccess, arcPublicInfo, arcPayoutWallet, arcPriceUnits, publishOnArc } = await import('./arcClient.js');
 const { playLinks, playPage } = await import('./playLink.js');
 const id = '11111111-2222-4333-8444-555555555555', w = '0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC';
 
@@ -29,4 +29,11 @@ test('paywall page hides the game link until paid', async () => {
   const html = await playPage(links, { title: 'T', artist: 'A', beats: [] }, { ...arcPublicInfo({ releaseId: 82, price: 1500000 }), unlockUrl: 'u' });
   assert.ok(html.includes('Unlock with MetaMask') && html.includes('1.5 USDC'));
   assert.ok(!html.includes(`href="${links.deepLink}"`));
+});
+test('retry reuses a completed Arc listing without a new transaction', async () => {
+  const progress = { songId: '4', releaseId: '9', price: '1500000', complete: true, txs: { registerSong: 'existing', publishRelease: 'existing', artistWallet: 'existing', creatorWallet: 'existing' } };
+  let saved;
+  const result = await publishOnArc({ title: 'Test', metadataURI: 'https://example.test', beatmapId: 'test', difficulty: 5, progress, onProgress: async value => { saved = value; } });
+  assert.equal(result.releaseId, '9');
+  assert.equal(saved.txs.publishRelease, 'existing');
 });

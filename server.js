@@ -4,7 +4,7 @@ import { randomUUID } from 'node:crypto';
 import { generateMusic } from './provider.js';
 import { generateBeatmap, beatmapEngineConfigured } from './beatmapClient.js';
 import { arkivConfigured, listTracks, publishTrack } from './arkivClient.js';
-import { beginWorldAuth, consumeWorldVerification, finishWorldAuth, sessionFor, worldConfigured, worldStatus } from './worldAuth.js';
+import { beginWorldAuth, consumeWorldVerification, finishWorldAuth, restoreTrackSession, sessionFor, worldConfigured, worldStatus } from './worldAuth.js';
 import { publicBase, pickDifficulty, playLinks, playPackage, playPage, qrSvg } from './playLink.js';
 import { arcConfigured, arcPublicInfo, arcPriceUnits, hasArcAccess, publishOnArc, signAccess, verifyAccess } from './arcClient.js';
 import { isAddress, getAddress, formatUnits } from 'viem';
@@ -123,9 +123,11 @@ const server = http.createServer(async (req, res) => {
     if (req.method === 'POST' && publishMatch) {
       const record = records.get(publishMatch[1]);
       if (!record) return json(res, 404, { error: 'Track not found.' });
+      restoreTrackSession(req, record);
       if (record.sessionId !== ensureSession().id) return json(res, 403, { error: 'Only the browser that generated this track can publish it.' });
       if (record.source !== 'lyria' || record.status !== 'completed') return json(res, 409, { error: 'Only completed live-generated tracks can be published.' });
       if (record.published) return json(res, 200, record.published);
+      if (record.arkivPending) return json(res, 409, { error: 'The Arkiv transaction may have been submitted. Its status needs checking before retrying; contact the SoundBeats team.' });
       let input; try { input = await body(req); } catch (e) { return json(res, 400, { error: e instanceof SyntaxError ? 'Invalid JSON.' : e.message }); }
       const title = typeof input.title === 'string' ? input.title.trim() : '';
       const creator = typeof input.creator === 'string' ? input.creator.trim() : '';
@@ -156,7 +158,17 @@ const server = http.createServer(async (req, res) => {
         let arkiv = {};
         if (arkivConfigured()) {
           try { arkiv = await publishTrack(metadata); }
-          catch (error) { console.error(error); await save(record); return json(res, 502, { error: arc ? 'Listed on Arc, but Arkiv could not save the record. Click Publish again to retry Arkiv.' : 'Arkiv could not publish this track. Please try again.' }); }
+          catch (error) {
+            // Do not log RPC URLs: they may contain the Arkiv access key.
+            console.error('Arkiv publish failed:', error?.name || 'Error');
+            if (error?.arkivMayHaveSubmitted) {
+              const txHash = typeof error.txHash === 'string' && /^0x[0-9a-f]{64}$/i.test(error.txHash) ? error.txHash : null;
+              record.arkivPending = { txHash, recordedAt: new Date().toISOString() };
+            }
+            await save(record);
+            const message = error?.arkivMayHaveSubmitted ? 'Arkiv may have received the transaction. Its status needs checking before retrying; contact the SoundBeats team.' : arc ? 'Listed on Arc, but Arkiv could not save the record. Click Publish again to retry Arkiv.' : 'Arkiv could not publish this track. Please try again.';
+            return json(res, 502, { error: message });
+          }
         }
         record.published = { ...metadata, ...arkiv };
         await save(record);

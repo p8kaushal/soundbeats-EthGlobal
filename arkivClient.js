@@ -8,7 +8,7 @@ export const ARKIV_WRITER = '0xf5D6dd74586be3a2C95D29E33226821f6fD0d8d8';
 export const ARKIV_CHAIN_ID = 7794095;
 export const ARKIV_EXPLORER = 'https://rabdi.explorer.arkiv.network';
 
-const Tracks = defineSchema('soundbeats.ethglobal.tracks.v1', {
+export const Tracks = defineSchema('soundbeats.ethglobal.tracks.v1', {
   trackId: str().indexed(),
   source: str().indexed(),
   beatmapSource: str().indexed(),
@@ -33,9 +33,8 @@ function clients({ write = false } = {}) {
 
 export function arkivConfigured() { return Boolean(process.env.ARKIV_PRIVATE_KEY && process.env.ARKIV_ACCESS_KEY); }
 
-export async function publishTrack(metadata) {
-  const { walletClient } = clients({ write: true });
-  const { entityKey } = await walletClient.createEntity(Tracks, {
+export function trackValues(metadata) {
+  return {
     trackId: metadata.trackId,
     source: metadata.source,
     beatmapSource: metadata.beatmapSource,
@@ -44,9 +43,21 @@ export async function publishTrack(metadata) {
     creator: metadata.creator,
     audioUrl: metadata.audioUrl,
     beatmapUrl: metadata.beatmapUrl,
-    metadata: stringToHex(JSON.stringify(metadata)),
-  }, { expiration: ExpirationTime.fromDays(180) });
-  return { entityKey, writer: ARKIV_WRITER, chainId: ARKIV_CHAIN_ID };
+    metadata: bytes(stringToHex(JSON.stringify(metadata))),
+  };
+}
+
+export async function publishTrack(metadata) {
+  const { walletClient } = clients({ write: true });
+  try {
+    const { entityKey, txHash, expiresAt } = await walletClient.createEntity(Tracks, trackValues(metadata), { expiration: ExpirationTime.fromDays(180) });
+    return { entityKey, txHash, expiresAt: String(expiresAt), writer: ARKIV_WRITER, chainId: ARKIV_CHAIN_ID };
+  } catch (error) {
+    // The SDK may lose the receipt after a transaction is sent. Do not silently
+    // resubmit an uncertain transaction: it could create a duplicate entity.
+    if (error?.name === 'EntityMutationError') error.arkivMayHaveSubmitted = true;
+    throw error;
+  }
 }
 
 export async function listTracks() {
