@@ -23,7 +23,7 @@ Start the API in one terminal with `npm run server`. In another terminal run `np
 
 ## Game integration
 
-The game consumes audio only. Confirm the game's supported formats, required duration, and whether it needs beat timing or a beatmap with the game teammate; this app does not generate a beatmap. The API returns relative URLs, so resolve them against the server origin. Localhost URLs are reachable only on the machine running the server.
+Each track can be turned into a playable beatmap (difficulty 1–10) through SoundBeats' private beatmap engine. The engine is proprietary and not part of this repository; the app calls it over an authenticated API. See [docs/BEATMAP_INTEGRATION.md](docs/BEATMAP_INTEGRATION.md) for setup, the API, the beatmap format and mock mode. Confirm the game's supported audio formats and duration with the game teammate. The API returns relative URLs, so resolve them against the server origin. Localhost URLs are reachable only on the machine running the server.
 
 Create a request (base64 is the raw file bytes, without a data URL prefix):
 
@@ -43,4 +43,4 @@ Poll `GET /api/tracks/{id}` until `status` is `completed` or `failed`. A complet
 
 ## Checks
 
-Run `npm test`. To validate live generation, configure a paid, authorized key, submit a real image, record the elapsed time and provider billing, and check the downloaded MP3 in the game. The demo sample is WAV and does not prove MP3 compatibility.
+Run `npm test` (the beatmap test uses mock mode, so it does not need the engine). To validate live generation, configure a paid, authorized key, submit a real image, record the elapsed time and provider billing, and check the downloaded MP3 in the game. The demo sample is WAV and does not prove MP3 compatibility.
