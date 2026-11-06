@@ -31,3 +31,7 @@ cd ~/soundbeats-EthGlobal && git fetch origin feature/arc-releases && sudo rm -r
 Build locally with `npm install --legacy-peer-deps && npx vite build` (or `bun install && bun run build`) in `releases-app/`, then commit `dist` (`git add -f releases-app/dist`; it's gitignored at the repo root).
 
 Never commit `.env` or secrets. The Arc Studio `.env` (RPC proxy token) is intentionally excluded.
+
+## Artist upload (added)
+
+The Artist tab now uploads an MP3 and cover through `releases-api/` (served at `/api/` on the same domain). Files go to private S3 under `artist_uploads/<uploadId>/`. The artist's wallet registers the song on Arc with `uploadId` and the cover URL in the metadata (512-byte limit). The server then verifies the Arc receipt and writes an Arkiv entity with schema `soundbeats.ethglobal.artist_songs.v1`. The game's `soundbeats.ethglobal.tracks.v1` schema is unchanged. See `releases-api/README.md`.

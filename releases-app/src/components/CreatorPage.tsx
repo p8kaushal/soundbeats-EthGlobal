@@ -17,7 +17,8 @@ export function CreatorPage({ data }: { data: AppData }) {
   if (!data.address) return <ConnectPrompt message="Connect your creator wallet to publish beatmap releases and track earnings." />
   const address = data.address
 
-  const selected = songId || String(data.catalog.songs[0]?.id ?? '')
+  const newestSong = data.catalog.songs.reduce<number | null>((max, s) => (max === null || s.id > max ? s.id : max), null)
+  const selected = songId || String(newestSong ?? '')
   const raw = tryParseUsdc(price)
   const valid = !!selected && beatmapId.trim().length > 0 && beatmapId.trim().length <= 64 && raw !== null
   const preview = raw ? splitPreview(raw) : null
@@ -50,7 +51,7 @@ export function CreatorPage({ data }: { data: AppData }) {
             <label className="block text-sm font-semibold">
               Song
               <select className="field mt-1" value={selected} onChange={(e) => setSongId(e.target.value)}>
-                {data.catalog.songs.map((s) => (
+                {[...data.catalog.songs].sort((a, b) => b.id - a.id).map((s) => (
                   <option key={s.id} value={s.id}>{s.title} · {artistLabel(s)}</option>
                 ))}
               </select>

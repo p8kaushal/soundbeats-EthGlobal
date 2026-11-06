@@ -68,11 +68,11 @@ export function useTx() {
   )
 
   const run = useCallback(
-    async ({ call, spend, successMessage }: RunOptions): Promise<boolean> => {
-      if (running.current) return false
+    async ({ call, spend, successMessage }: RunOptions): Promise<Address | null> => {
+      if (running.current) return null
       if (!address) {
         setState({ phase: 'error', error: 'Connect your wallet first.' })
-        return false
+        return null
       }
       running.current = true
       try {
@@ -87,7 +87,7 @@ export function useTx() {
           })
           if (balance < spend) {
             setState({ phase: 'error', error: 'Not enough USDC. Use "Get test USDC" in the sidebar, then try again.' })
-            return false
+            return null
           }
           const allowance = await readContract(config, {
             address: USDC_ADDRESS, abi: erc20Abi, functionName: 'allowance', args: [address, SOUNDBEATS_ADDRESS], chainId: CHAIN_ID,
@@ -129,16 +129,16 @@ export function useTx() {
           queryClient.invalidateQueries({ queryKey: ['catalog'] }),
           queryClient.invalidateQueries({ queryKey: ['me'] }),
         ])
-        return true
+        return hash ?? null
       } catch (error) {
         if (error instanceof TransactionUncertainError) {
           setState({ phase: 'uncertain', hash: error.hash, error: error.message })
-          return false
+          return null
         }
         const message = describeError(error)
         if (message === null) setState({ phase: 'idle' })
         else setState({ phase: 'error', error: message })
-        return false
+        return null
       } finally {
         running.current = false
       }
