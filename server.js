@@ -5,6 +5,7 @@ import { generateMusic } from './provider.js';
 import { generateBeatmap, beatmapEngineConfigured } from './beatmapClient.js';
 import { arkivConfigured, listTracks, publishTrack } from './arkivClient.js';
 import { beginWorldAuth, consumeWorldVerification, finishWorldAuth, sessionFor, worldConfigured, worldStatus } from './worldAuth.js';
+import { publicBase, pickDifficulty, playLinks, playPackage, playPage, qrSvg } from './playLink.js';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
@@ -12,6 +13,7 @@ const root = path.dirname(fileURLToPath(import.meta.url));
 const data = path.join(root, 'data');
 await mkdir(data, { recursive: true });
 const port = Number(process.env.PORT || 3000);
+const basePath = (process.env.BASE_PATH || '').replace(/\/+$/, '');
 const maxBytes = 5 * 1024 * 1024;
 const records = new Map();
 const requests = new Map();
@@ -28,7 +30,7 @@ function rateLimited(req, bucket, limit, windowMs) {
   recent.push(now); requests.set(key, recent);
   return recent.length > limit;
 }
-const originFor = req => process.env.PUBLIC_BASE_URL || `${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}`;
+const originFor = req => process.env.PUBLIC_BASE_URL || `${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}${basePath}`;
 function demoWav() {
   const rate = 22050, seconds = 8, samples = rate * seconds, b = Buffer.alloc(44 + samples * 2);
   b.write('RIFF'); b.writeUInt32LE(b.length - 8, 4); b.write('WAVEfmt ', 8); b.writeUInt32LE(16, 16); b.writeUInt16LE(1, 20); b.writeUInt16LE(1, 22); b.writeUInt32LE(rate, 24); b.writeUInt32LE(rate * 2, 28); b.writeUInt16LE(2, 32); b.writeUInt16LE(16, 34); b.write('data', 36); b.writeUInt32LE(samples * 2, 40);
@@ -50,6 +52,10 @@ async function run(record, image, mimeType, prompt, demo) {
 const server = http.createServer(async (req, res) => {
   try {
     const url = new URL(req.url, 'http://localhost');
+    if (basePath) {
+      if (url.pathname === basePath) { res.writeHead(301, { Location: basePath + '/' + url.search }); return res.end(); }
+      if (url.pathname.startsWith(basePath + '/')) url.pathname = url.pathname.slice(basePath.length);
+    }
     let session;
     const ensureSession = () => session ||= sessionFor(req, res);
     if (req.method === 'GET' && url.pathname === '/api/auth/world/status') return json(res, 200, worldStatus(ensureSession()));
@@ -58,8 +64,8 @@ const server = http.createServer(async (req, res) => {
       catch (error) { return json(res, 503, { error: error.message }); }
     }
     if (req.method === 'GET' && url.pathname === '/api/auth/world/callback') {
-      try { await finishWorldAuth(req, res, url); res.writeHead(302, { Location: '/?world=verified', 'Cache-Control': 'no-store' }); return res.end(); }
-      catch (error) { console.error(error); res.writeHead(302, { Location: '/?world=failed', 'Cache-Control': 'no-store' }); return res.end(); }
+      try { await finishWorldAuth(req, res, url); res.writeHead(302, { Location: `${basePath || ''}/?world=verified`, 'Cache-Control': 'no-store' }); return res.end(); }
+      catch (error) { console.error(error); res.writeHead(302, { Location: `${basePath || ''}/?world=failed`, 'Cache-Control': 'no-store' }); return res.end(); }
     }
     if (req.method === 'GET' && url.pathname === '/api/config') return json(res, 200, { worldConfigured: worldConfigured(), arkivConfigured: arkivConfigured(), beatmapConfigured: beatmapEngineConfigured() });
     if (req.method === 'GET' && url.pathname === '/api/catalog') {
@@ -79,6 +85,9 @@ const server = http.createServer(async (req, res) => {
       if (!demo && !process.env.GEMINI_API_KEY) return json(res, 503, { error: 'Live generation needs GEMINI_API_KEY. Use the demo track or configure the key.' });
       if (!demo && !consumeWorldVerification(ensureSession())) return json(res, 401, { error: 'Verify with World before starting live music generation.', verificationRequired: true });
       const record = { id: randomUUID(), sessionId: ensureSession().id, status: 'processing', source: demo ? 'demo' : 'lyria', createdAt: new Date().toISOString(), audioUrl: null, format: null, mimeType: null, durationSeconds: null };
+      const imageFormat = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp' }[mimeType];
+      await writeFile(path.join(data, `${record.id}.image.${imageFormat}`), image);
+      Object.assign(record, { imageFormat, imageMimeType: mimeType });
       await save(record); run(record, image, mimeType, input.prompt || '', demo).catch(console.error); return json(res, 202, publicRecord(record));
     }
     const publishMatch = url.pathname.match(/^\/api\/tracks\/([0-9a-f-]{36})\/publish$/);
@@ -126,6 +135,34 @@ const server = http.createServer(async (req, res) => {
         await save(record);
         return json(res, 200, { ...result, beatmapUrl: record.beatmaps[difficulty].url });
       } catch (e) { console.error(e); return json(res, 502, { error: e.message || 'Beatmap generation failed.' }); }
+    }
+    const imageMatch = url.pathname.match(/^\/api\/tracks\/([0-9a-f-]{36})\/image$/);
+    if ((req.method === 'GET' || req.method === 'HEAD') && imageMatch) {
+      const record = records.get(imageMatch[1]);
+      if (!record || !record.imageFormat || !record.imageMimeType) return json(res, 404, { error: 'Image not found.' });
+      const bytes = await readFile(path.join(data, `${record.id}.image.${record.imageFormat}`));
+      res.writeHead(200, { 'Content-Type': record.imageMimeType, 'Content-Length': bytes.length, 'Cache-Control': 'public, max-age=86400' });
+      return req.method === 'HEAD' ? res.end() : res.end(bytes);
+    }
+    const linkMatch = url.pathname.match(/^\/api\/tracks\/([0-9a-f-]{36})\/(play-link|play-qr\.svg)$/);
+    const pageMatch = url.pathname.match(/^\/play\/([0-9a-f-]{36})$/);
+    const pkgMatch = url.pathname.match(/^\/api\/play\/([0-9a-f-]{36})\/(\d{1,2})\.json$/);
+    if (req.method === 'GET' && (linkMatch || pageMatch || pkgMatch)) {
+      const id = (linkMatch || pageMatch || pkgMatch)[1];
+      const record = records.get(id);
+      if (!record) return json(res, 404, { error: 'Track not found.' });
+      if (record.status !== 'completed') return json(res, 409, { error: 'Audio is not ready.' });
+      const requested = pkgMatch ? pkgMatch[2] : url.searchParams.get('difficulty');
+      if (requested != null && !/^(10|[1-9])$/.test(requested)) return json(res, 400, { error: 'Difficulty must be a whole number from 1 to 10.' });
+      const difficulty = pickDifficulty(record, requested == null ? null : Number(requested));
+      if (difficulty == null) return json(res, 404, { error: 'No beatmap for this track yet. POST /api/tracks/{id}/beatmap?difficulty=N first.' });
+      const base = publicBase(req), links = playLinks(base, record, difficulty);
+      if (linkMatch?.[2] === 'play-link') return json(res, 200, links);
+      if (linkMatch) { res.writeHead(200, { 'Content-Type': 'image/svg+xml', 'Cache-Control': 'no-store' }); return res.end(await qrSvg(links.playPageUrl)); }
+      const beatmap = JSON.parse(await readFile(path.join(data, `${record.id}.beatmap-d${difficulty}.json`), 'utf8'));
+      const pkg = playPackage(base, record, beatmap);
+      if (pkgMatch) { res.writeHead(200, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'public, max-age=300' }); return res.end(JSON.stringify(pkg)); }
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' }); return res.end(await playPage(links, pkg));
     }
     const match = url.pathname.match(/^\/api\/tracks\/([0-9a-f-]{36})(\/audio)?$/);
     if ((req.method === 'GET' || req.method === 'HEAD') && match) {
